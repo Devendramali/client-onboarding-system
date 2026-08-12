@@ -176,9 +176,9 @@ const CreatePasswordForm = () => {
       </form>
       <div className="mt-5 2xl:mt-8 text-center text-base text-default-600">
         Not now? Return{" "}
-        <Link href="/auth/register" className="text-[#1b776f]">
+        <Link href="/auth/login" className="text-[#1b776f]">
           {" "}
-          Sign In{" "}
+          Log In{" "}
         </Link>
       </div>
     </div>
