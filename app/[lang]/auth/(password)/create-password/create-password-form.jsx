@@ -52,7 +52,7 @@ const CreatePasswordForm = () => {
     });
   };
   return (
-    <div className="w-full">
+    <div className="w-full py-17">
       <Link href="/dashboard" className="inline-block">
          <Image
                   src="/images/all-img/logo.svg"

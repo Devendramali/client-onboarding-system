@@ -54,8 +54,8 @@ const CreatePasswordPage = () => {
                      </div>
                    </div>
 
-          <div className=" min-h-screen basis-full md:basis-1/2 w-full px-4 py-5 flex justify-center items-center">
-            <div className="lg:w-[480px] ">
+          <div className=" min-h-screen basis-full md:basis-1/2 w-full px-4 py-5 flex justify-center">
+            <div className="lg:w-[480px]">
               <CreatePasswordForm />
             </div>
           </div>

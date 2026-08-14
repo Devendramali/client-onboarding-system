@@ -115,7 +115,7 @@ const VerfiyForm = () => {
   );
 
   return (
-    <div className="w-full md:w-[480px] py-5">
+    <div className="w-full  py-17">
 
       <Link href="/dashboard" className="inline-block">
         <Image
