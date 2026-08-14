@@ -7,7 +7,11 @@ import TanstackProvider from "@/provider/providers.client";
 import AuthProvider from "@/provider/auth.provider";
 import "flatpickr/dist/themes/light.css";
 import DirectionProvider from "@/provider/direction.provider";
-const inter = Inter({ subsets: ["latin"] });
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: {
@@ -20,13 +24,17 @@ export const metadata = {
 export default function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang}>
-      <AuthProvider>
-        <TanstackProvider>
-          <Providers>
-            <DirectionProvider lang={lang}>{children}</DirectionProvider>
-          </Providers>
-        </TanstackProvider>
-      </AuthProvider>
+      <body className={inter.className}>
+        <AuthProvider>
+          <TanstackProvider>
+            <Providers>
+              <DirectionProvider lang={lang}>
+                {children}
+              </DirectionProvider>
+            </Providers>
+          </TanstackProvider>
+        </AuthProvider>
+      </body>
     </html>
   );
 }

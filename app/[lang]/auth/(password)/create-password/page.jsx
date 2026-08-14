@@ -17,8 +17,7 @@ const CreatePasswordPage = () => {
     <Fragment>
       <div className="min-h-screen bg-background  flex items-center  overflow-hidden w-full">
         <div className="min-h-screen basis-full flex flex-wrap w-full  justify-center overflow-y-auto">
-           <div
-                     className="basis-1/2 bg-[#1b776f] w-full relative hidden xl:flex justify-center items-center bg-linear-to-br
+           <div className="basis-1/2 bg-[#1b776f] w-full relative hidden xl:flex justify-center items-center bg-linear-to-br
                    from-[#1b776f]-600 via-[#1b776f]-400 to-[#1b776f]-600"
                    >
                      <Image
