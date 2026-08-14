@@ -45,27 +45,27 @@ import {
 
 export const menusConfig = {
   mainNav: [
-    {
-      title: "Dashboard",
-      icon: DashBoard,
-      child: [
-        {
-          title: "Analytics",
-          href: "/dashboard",
-          icon: Graph,
-        },
-        {
-          title: "Ecommerce",
-          href: "/ecommerce",
-          icon: Cart,
-        },
-        {
-          title: "Project ",
-          href: "/project",
-          icon: ClipBoard,
-        },
-      ],
-    },
+    // {
+    //   title: "Dashboard",
+    //   icon: DashBoard,
+    //   child: [
+    //     {
+    //       title: "Analytics",
+    //       href: "/dashboard",
+    //       icon: Graph,
+    //     },
+    //     {
+    //       title: "Ecommerce",
+    //       href: "/ecommerce",
+    //       icon: Cart,
+    //     },
+    //     {
+    //       title: "Project ",
+    //       href: "/project",
+    //       icon: ClipBoard,
+    //     },
+    //   ],
+    // },
     {
       title: "Application",
       icon: Application,
@@ -981,19 +981,21 @@ export const menusConfig = {
       ],
     },
   ],
+
+
   sidebarNav: {
     modern: [
       {
-        title: "Dashboard",
+        title: "User Module",
         icon: DashBoard,
         child: [
           {
-            title: "Analytics",
-            href: "/dashboard",
+            title: "User List",
+            href: "/usermodule",
             icon: Graph,
           },
           {
-            title: "Ecommerce",
+            title: "Add User",
             href: "/ecommerce",
             icon: Cart,
           },

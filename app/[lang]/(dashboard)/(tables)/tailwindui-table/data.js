@@ -66,6 +66,45 @@ export const users = [
   },
 ];
 
+export const usersdata = [
+    {
+      id: 1,
+      name: "John Doe",
+      email: "john@example.com",
+      mobile: "+91 9876543210",
+      role: "Admin",
+      modules: ["Dashboard", "Users", "Reports"],
+      status: "Active",
+    },
+    {
+      id: 2,
+      name: "Sarah Smith",
+      email: "sarah@example.com",
+      mobile: "+91 9876543211",
+      role: "member",
+      modules: ["Dashboard", "Reports"],
+      status: "Active",
+    },
+    {
+      id: 3,
+      name: "Michael Johnson",
+      email: "michael@example.com",
+      mobile: "+91 9876543212",
+      role: "owner",
+      modules: ["Content", "Reports"],
+      status: "Inactive",
+    },
+    {
+      id: 4,
+      name: "Emily Davis",
+      email: "emily@example.com",
+      mobile: "+91 9876543213",
+      role: "User",
+      modules: ["Dashboard"],
+      status: "Active",
+    },
+];
+
 import { faker } from "@faker-js/faker";
 export const users1 = [
   {

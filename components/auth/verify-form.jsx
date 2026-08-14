@@ -133,7 +133,7 @@ const VerfiyForm = () => {
       </div>
 
       <div className="2xl:text-lg text-base text-default-600 mt-2 leading-6">
-        Enter the 6 figure confirmation code shown on the email
+        Enter the 6-digit confirmation code sent to your email. 
       </div>
 
       <form
@@ -177,6 +177,13 @@ const VerfiyForm = () => {
             Verify Now
           </Button>
         </div>
+         <div className="mt-5 2xl:mt-8 text-center text-base text-default-600">
+        Didn’t receive the code? {" "}
+        <Link href="" className="text-[#1b776f]">
+          {" "}
+          Resend OTP{" "}
+        </Link>
+      </div>
 
       </form>
     </div>

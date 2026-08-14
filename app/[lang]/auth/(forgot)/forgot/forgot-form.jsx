@@ -52,10 +52,10 @@ const ForgotForm = () => {
           />
       </Link>
       <div className="2xl:mt-8 mt-6 2xl:text-3xl text-2xl font-bold text-default-900">
-        Forget Your Password?
+        Forgot your password?
       </div>
       <div className="2xl:text-lg text-base text-default-600 mt-2 leading-6">
-        Enter your email & instructions will be sent to you!
+        Enter your email and we'll send you an OTP to reset your password
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className="mt-5 xl:mt-7">
         <div>

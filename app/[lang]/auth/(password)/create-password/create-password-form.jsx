@@ -19,10 +19,10 @@ import Image from "next/image";
 const schema = z.object({
   password: z
     .string()
-    .min(4, { message: "Your password must be at least 4 characters." }),
+    .min(8, { message: "Your password must contain at least 8 characters" }),
   confirmPassword: z
     .string()
-    .min(4, { message: "Your password must be at least 4 characters." }),
+    .min(8, { message: "Your password must contain at least 8 characters" }),
 });
 const CreatePasswordForm = () => {
   const [isPending, startTransition] = React.useTransition();
@@ -67,7 +67,7 @@ const CreatePasswordForm = () => {
         Create New Password
       </div>
       <div className="2xl:text-lg text-base text-default-600 mt-2 leading-6">
-        Enter your password to unlock the screen!
+       Enter your new password to unlock the screen!
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="mt-5 xl:mt-7">
@@ -77,7 +77,7 @@ const CreatePasswordForm = () => {
               htmlFor="password"
               className="mb-2 font-medium text-default-600"
             >
-              Password
+              New Password
             </Label>
             <div className="relative">
               <Input
@@ -118,7 +118,7 @@ const CreatePasswordForm = () => {
               htmlFor="confirmPassword"
               className="mb-2 font-medium text-default-600"
             >
-              Confirm Password
+              Confirm New Password
             </Label>
             <div className="relative">
               <Input
@@ -156,7 +156,7 @@ const CreatePasswordForm = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex  items-center gap-1.5 mt-5 ">
+        {/* <div className="flex-1 flex  items-center gap-1.5 mt-5 ">
           <Checkbox
             size="sm"
             className="border-[#1b776f]-300 mt-[1px]"
@@ -168,18 +168,18 @@ const CreatePasswordForm = () => {
           >
             You accept our Terms & Conditions
           </Label>
-        </div>
+        </div> */}
         <Button className="w-full mt-8" size="lg">
           {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {isPending ? "Resetting..." : "Reset Password"}
         </Button>
       </form>
       <div className="mt-5 2xl:mt-8 text-center text-base text-default-600">
-        Not now? Return{" "}
+        Not now? Return to {" "}
         <Link href="/auth/login" className="text-[#1b776f]">
           {" "}
-          Log In{" "}
-        </Link>
+          Login
+        </Link>.
       </div>
     </div>
   );

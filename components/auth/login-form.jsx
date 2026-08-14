@@ -73,7 +73,7 @@ const LogInForm = () => {
     });
   };
   return (
-    <div className="w-full py-10">
+    <div className="w-full py-17">
       <Link href="/dashboard" className="inline-block">
         <Image
     src="/images/all-img/logo.svg"
@@ -166,7 +166,7 @@ const LogInForm = () => {
             </Label>
           </div>
           <Link href="/auth/forgot" className="flex-none text-sm text-[#1b776f]">
-            Forget Password?
+           Forgot Password?
           </Link>
         </div>
         <Button
