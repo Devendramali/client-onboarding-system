@@ -73,7 +73,7 @@ const LogInForm = () => {
     });
   };
   return (
-    <div className="w-full py-17">
+    <div className="w-full py-17 paddingtop">
       <Link href="/dashboard" className="inline-block">
         <Image
           src="/images/all-img/logo.svg"

@@ -16,30 +16,39 @@ import AboutUs from "./about-us"
 import Stats from "./stats"
 import Contact from "./contact"
 import Footer from "./footer";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 const LandingPageView = () => {
   const mounted = useMounted();
+  const router = useRouter()
+
+   useEffect(() => {
+    router.replace("/dashboard");
+  }, [router]);
+
   if (!mounted) {
     return <LayoutLoader />;
   }
-  return (
-    <div className="bg-background">
-      <Header />
-      <Hero />
-      <Stats />
-      <AllComponents />
-      <ShowCase />
-      <ColorSchemas />
-      <ProjectTools />
-      <FigmaKit />
-      <AboutUs />
-      <AboutDashtail />
-      <Faq />
-      <PricingPlan />
-      <CustomProject />
-      <Contact />
-      <Footer />
-    </div>
-  );
+  return null
+  // (
+  //   <div className="bg-background">
+  //     <Header />
+  //     <Hero />
+  //     <Stats />
+  //     <AllComponents />
+  //     <ShowCase />
+  //     <ColorSchemas />
+  //     <ProjectTools />
+  //     <FigmaKit />
+  //     <AboutUs />
+  //     <AboutDashtail />
+  //     <Faq />
+  //     <PricingPlan />
+  //     <CustomProject />
+  //     <Contact />
+  //     <Footer />
+  //   </div>
+  // );
 };
 
 export default LandingPageView;
