@@ -2610,15 +2610,21 @@ html[dir="rtl"] .react-select .select__loading-indicator {
     padding-top: 130px;
   }
 }
-
+/* 
 @media (min-width: 1600px) and (max-width: 1900px) {
   .paddingtop {
     padding-top: 80px;
   }
 }
 
-@media (min-width: 1300px) and (max-width: 1600px) {
+@media (min-width: 1500px) and (max-width: 1600px) {
   .paddingtop {
     padding-top: 43px;
   }
 }
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+  .paddingtop {
+    padding-top: clamp(30px, 5vw, 80px);
+  }
+} */
