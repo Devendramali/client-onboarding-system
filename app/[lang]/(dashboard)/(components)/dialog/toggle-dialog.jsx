@@ -31,12 +31,10 @@ const ToggleDialog = () => {
   return (
     <>
       <Dialog>
-        <DialogTrigger asChild>
-          <Button>Basic Modal</Button>
-        </DialogTrigger>
+      
         <DialogContent size="2xl" className="p-0">
           <DialogHeader className="p-6 pb-2">
-            <DialogTitle className="text-base font-medium"> Add Your Address</DialogTitle>
+            <DialogTitle className="text-base font-medium"> Add Your xcxvcxc Address</DialogTitle>
           </DialogHeader>
           <div className='max-h-[300px]'>
             <ScrollArea className="h-full px-6">
@@ -44,33 +42,21 @@ const ToggleDialog = () => {
                 activeIndex === 1 &&
                 <div className="sm:grid  sm:grid-cols-2 sm:gap-5 space-y-4 sm:space-y-0">
                   <div className="flex flex-col gap-2">
-                    <Label>First Name</Label>
-                    <Input type="text" placeholder="Enter first name" />
+                    <Label>Module Name</Label>
+                    <Input type="text" placeholder="Enter Module Name" />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <Label>Last Name</Label>
-                    <Input type="text" placeholder="Enter last name" />
+                    <Label>Module Code</Label>
+                    <Input type="text" placeholder="Enter Module Code" />
                   </div>
-                  <div className="flex flex-col gap-2">
-                    <Label>Country/Region</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select Your Country" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="bd">Bangladesh</SelectItem>
-                        <SelectItem value="in">India</SelectItem>
-                        <SelectItem value="aus">Australia</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
+                
                   <div className="flex flex-col gap-2">
                     <Label>Street Address</Label>
-                    <Input type="text" placeholder="Street address" />
+                    <text type="text" placeholder="Street address" />
                   </div>
                   <div className="flex flex-col gap-2">
                     <Label>Town/City</Label>
-                    <Input type="text" placeholder="Your town/city" />
+                    <Textarea type="text" placeholder="Your town/city" />
                   </div>
                   <div className="flex flex-col gap-2">
                     <Label>District</Label>

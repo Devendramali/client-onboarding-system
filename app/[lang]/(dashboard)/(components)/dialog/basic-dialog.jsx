@@ -17,11 +17,7 @@ const BasicDialog = () => {
           <Button>Basic Modal</Button>
         </DialogTrigger>
         <DialogContent>
-          <DialogHeader>
-            <DialogTitle className="text-base font-medium ">
-              What is Modals in UI Design?
-            </DialogTitle>
-          </DialogHeader>
+         
 
           <div className="text-sm text-default-500  space-y-4">
             <p>

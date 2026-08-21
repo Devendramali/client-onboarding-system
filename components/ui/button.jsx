@@ -22,9 +22,9 @@ const buttonVariants = cva(
       },
       variant: {
         outline:
-          "border border-current  bg-transparent hover:text-primary-foreground",
+          "border border-[#1b776f]  bg-transparent hover:text-primary-foreground",
         soft: "  hover:text-primary-foreground",
-        ghost: "bg-transparent text-current hover:text-primary-foreground",
+        ghost: "bg-transparent text-[#1b776f]  hover:text-primary-foreground",
       },
       size: {
         default: "h-10 px-4 py-[10px]",
@@ -76,12 +76,12 @@ const buttonVariants = cva(
         variant: "outline",
         color: "default",
         className:
-          "text-primary  hover:text-primary-foreground hover:border-primary hover:bg-[#1b776f]",
+          "text-[#1b776f]  hover:text-primary-foreground hover:border-primary hover:bg-[#1b776f]",
       },
       {
         variant: "outline",
         color: "primary",
-        className: "text-primary  bg-[#1b776f]/10",
+        className: "text-[#1b776f]  bg-[#1b776f]/10",
       },
       {
         variant: "soft",
@@ -112,12 +112,12 @@ const buttonVariants = cva(
       {
         variant: "soft",
         color: "default",
-        className: "text-primary bg-[#1b776f]/10",
+        className: "text-[#1b776f] bg-[#1b776f]/10",
       },
       {
         variant: "ghost",
         color: "default",
-        className: " text-primary  ",
+        className: " text-[#1b776f]  ",
       },
       {
         variant: "ghost",

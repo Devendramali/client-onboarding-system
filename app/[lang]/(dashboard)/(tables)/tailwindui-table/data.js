@@ -67,43 +67,208 @@ export const users = [
 ];
 
 export const usersdata = [
-    {
-      id: 1,
-      name: "John Doe",
-      email: "john@example.com",
-      mobile: "+91 9876543210",
-      role: "Admin",
-      modules: ["Dashboard", "Users", "Reports"],
-      status: "Active",
-    },
-    {
-      id: 2,
-      name: "Sarah Smith",
-      email: "sarah@example.com",
-      mobile: "+91 9876543211",
-      role: "member",
-      modules: ["Dashboard", "Reports"],
-      status: "Active",
-    },
-    {
-      id: 3,
-      name: "Michael Johnson",
-      email: "michael@example.com",
-      mobile: "+91 9876543212",
-      role: "owner",
-      modules: ["Content", "Reports"],
-      status: "Inactive",
-    },
-    {
-      id: 4,
-      name: "Emily Davis",
-      email: "emily@example.com",
-      mobile: "+91 9876543213",
-      role: "User",
-      modules: ["Dashboard"],
-      status: "Active",
-    },
+  {
+    name: "Rahul Sharma",
+    email: "rahul.sharma@example.com",
+    mobile: "+91 9876543210",
+    department: "IT",
+    designation: "Senior Frontend Developer",
+    role: "admin",
+    status: true,
+    sendActivationEmail: true,
+  },
+  {
+    name: "Priya Patel",
+    email: "priya.patel@example.com",
+    mobile: "+91 9823456712",
+    department: "HR",
+    designation: "HR Manager",
+    role: "manager",
+    status: true,
+    sendActivationEmail: true,
+  },
+  {
+    name: "Amit Verma",
+    email: "amit.verma@example.com",
+    mobile: "+91 9765432189",
+    department: "Finance",
+    designation: "Finance Executive",
+    role: "member",
+    status: true,
+    sendActivationEmail: false,
+  },
+  {
+    name: "Sneha Kulkarni",
+    email: "sneha.kulkarni@example.com",
+    mobile: "+91 9812345678",
+    department: "Marketing",
+    designation: "Marketing Executive",
+    role: "member",
+    status: true,
+    sendActivationEmail: true,
+  },
+  {
+    name: "Vikas Joshi",
+    email: "vikas.joshi@example.com",
+    mobile: "+91 9898765432",
+    department: "IT",
+    designation: "Backend Developer",
+    role: "member",
+    status: false,
+    sendActivationEmail: false,
+  },
+  {
+    name: "Neha Deshmukh",
+    email: "neha.deshmukh@example.com",
+    mobile: "+91 9753124680",
+    department: "Operations",
+    designation: "Operations Manager",
+    role: "manager",
+    status: true,
+    sendActivationEmail: true,
+  },
+  {
+    name: "Rohit Mehta",
+    email: "rohit.mehta@example.com",
+    mobile: "+91 9834567120",
+    department: "Sales",
+    designation: "Sales Executive",
+    role: "member",
+    status: true,
+    sendActivationEmail: false,
+  },
+  {
+    name: "Anjali Singh",
+    email: "anjali.singh@example.com",
+    mobile: "+91 9912345678",
+    department: "IT",
+    designation: "UI/UX Designer",
+    role: "member",
+    status: true,
+    sendActivationEmail: true,
+  },
+  {
+    name: "Saurabh Patil",
+    email: "saurabh.patil@example.com",
+    mobile: "+91 9876123450",
+    department: "Administration",
+    designation: "Admin Executive",
+    role: "admin",
+    status: false,
+    sendActivationEmail: false,
+  },
+  {
+    name: "Kavita Shah",
+    email: "kavita.shah@example.com",
+    mobile: "+91 9801234567",
+    department: "HR",
+    designation: "HR Executive",
+    role: "member",
+    status: true,
+    sendActivationEmail: true,
+  },
 ];
+
+export const moduleData = [
+  {
+    id: 1,
+    moduleName: "Client Management",
+    moduleCode: "CLM001",
+    description:
+      "Manage client profiles, contact details, and client-related information.",
+    status: true,
+  },
+  {
+    id: 2,
+    moduleName: "Billing Management",
+    moduleCode: "BIL001",
+    description:
+      "Manage invoices, payments, billing records, and transactions.",
+    status: true,
+  },
+  {
+    id: 3,
+    moduleName: "Project Management",
+    moduleCode: "PRJ001",
+    description:
+      "Create and manage projects, tasks, milestones, and project status.",
+    status: true,
+  },
+  {
+    id: 4,
+    moduleName: "User Management",
+    moduleCode: "USR001",
+    description:
+      "Manage users, roles, permissions, and account information.",
+    status: true,
+  },
+  {
+    id: 5,
+    moduleName: "Employee Management",
+    moduleCode: "EMP001",
+    description:
+      "Manage employee profiles, departments, designations, and records.",
+    status: true,
+  },
+  {
+    id: 6,
+    moduleName: "Attendance Management",
+    moduleCode: "ATM001",
+    description:
+      "Track employee attendance, working hours, and attendance records.",
+    status: true,
+  },
+  {
+    id: 7,
+    moduleName: "Leave Management",
+    moduleCode: "LVM001",
+    description:
+      "Manage employee leave requests, approvals, and leave balances.",
+    status: true,
+  },
+  {
+    id: 8,
+    moduleName: "Expense Management",
+    moduleCode: "EXP001",
+    description:
+      "Track and manage business expenses and reimbursement requests.",
+    status: false,
+  },
+  {
+    id: 9,
+    moduleName: "Reports Management",
+    moduleCode: "RPT001",
+    description:
+      "Generate and manage system reports and analytical summaries.",
+    status: true,
+  },
+  {
+    id: 10,
+    moduleName: "Notification Management",
+    moduleCode: "NTF001",
+    description:
+      "Manage system notifications, alerts, and announcements.",
+    status: false,
+  },
+  {
+    id: 11,
+    moduleName: "Document Management",
+    moduleCode: "DOC001",
+    description:
+      "Store, organize, and manage important business documents.",
+    status: true,
+  },
+  {
+    id: 12,
+    moduleName: "Task Management",
+    moduleCode: "TSK001",
+    description:
+      "Create, assign, track, and manage tasks across projects.",
+    status: true,
+  },
+];
+
+
 
 import { faker } from "@faker-js/faker";
 export const users1 = [

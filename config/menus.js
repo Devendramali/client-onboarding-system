@@ -995,8 +995,8 @@ export const menusConfig = {
             icon: Graph,
           },
           {
-            title: "Add User",
-            href: "/ecommerce",
+            title: "Module Management",
+            href: "/module-management",
             icon: Cart,
           },
           {
