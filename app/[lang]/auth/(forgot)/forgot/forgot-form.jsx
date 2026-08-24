@@ -42,7 +42,7 @@ const ForgotForm = () => {
     });
   };
   return (
-    <div className="w-full  py-17 paddingtop">
+    <div className="w-full paddingtop">
       <Link href="/dashboard" className="inline-block">
           <Image
             src="/images/all-img/logo.svg"

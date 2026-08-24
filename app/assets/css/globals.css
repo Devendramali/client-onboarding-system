@@ -2605,11 +2605,11 @@ html[dir="rtl"] .react-select .select__loading-indicator {
 }
 
 
-@media (min-width: 1821px) {
+/* @media (min-width: 1821px) {
   .paddingtop {
     padding-top: 130px;
   }
-}
+} */
 /* 
 @media (min-width: 1600px) and (max-width: 1900px) {
   .paddingtop {
