@@ -268,6 +268,69 @@ export const moduleData = [
   },
 ];
 
+export const rolemanagement = [
+   {
+    serialNo: 1,
+    roleName: "Super Admin",
+    description: "Has complete access to all modules and system settings."
+  },
+  {
+    serialNo: 2,
+    roleName: "Admin",
+    description: "Manages users, roles, modules, and general system operations."
+  },
+  {
+    serialNo: 3,
+    roleName: "Manager",
+    description: "Can manage assigned teams, projects, and related activities."
+  },
+  {
+    serialNo: 4,
+    roleName: "HR Manager",
+    description: "Manages employees, attendance, and HR-related information."
+  },
+  {
+    serialNo: 5,
+    roleName: "Accountant",
+    description: "Handles billing, invoices, payments, and financial records."
+  },
+  {
+    serialNo: 6,
+    roleName: "Project Manager",
+    description: "Creates and manages projects, tasks, and project teams."
+  },
+  {
+    serialNo: 7,
+    roleName: "Team Lead",
+    description: "Manages team members and monitors assigned tasks."
+  },
+  {
+    serialNo: 8,
+    roleName: "Developer",
+    description: "Handles development tasks and technical activities."
+  },
+  {
+    serialNo: 9,
+    roleName: "Employee",
+    description: "Has access to assigned tasks and basic system features."
+  },
+  {
+    serialNo: 10,
+    roleName: "Client",
+    description: "Can view assigned projects, updates, and relevant information."
+  },
+  {
+    serialNo: 11,
+    roleName: "Support Executive",
+    description: "Handles customer queries and support requests."
+  },
+  {
+    serialNo: 12,
+    roleName: "Viewer",
+    description: "Read-only access to permitted modules and information."
+  }
+]
+
 
 
 import { faker } from "@faker-js/faker";

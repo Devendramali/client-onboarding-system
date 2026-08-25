@@ -989,6 +989,11 @@ export const menusConfig = {
         title: "User Module",
         icon: DashBoard,
         child: [
+            {
+            title: "Role Management ",
+            href: "/role-management",
+            icon: Graph,
+          },
           {
             title: "User List",
             href: "/usermodule",

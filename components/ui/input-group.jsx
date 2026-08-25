@@ -33,13 +33,13 @@ const InputGroupText = React.forwardRef(
     <div
       ref={ref}
       className={cn(
-        "border border-default-300 text-default-500 text-sm font-normal  bg-background flex items-center justify-center px-3 first:border-r-0 last:border-l-0 first:rounded-l-md last:rounded-r-md group-focus-within:border-primary ring-primary  transition duration-300",
+        "border border-default-300 text-default-500 text-sm font-normal  bg-background flex items- justify-center px-3 pt-[11px] first:border-r-0 last:border-l-0 first:rounded-l-md last:rounded-r-md group-focus-within:border-[#1b776f] ring-[#1b776f]  transition duration-300",
         className,
         {
           "border-info/50 group-focus-within:border-info-700 ring-info-700":
             color === "info",
-          "border-primary/50 group-focus-within:border-primary-700 ring-primary-700":
-            color === "primary",
+          "border-[#1b776f] group-focus-within:border-[#1b776f] ring-[#1b776f]":
+            color === "[#1b776f]",
           "border-success/50 group-focus-within:border-success-700 ring-success-700":
             color === "success",
           "border-destructive/50 group-focus-within:border-destructive-700 ring-destructive-700":

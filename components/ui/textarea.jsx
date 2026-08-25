@@ -10,9 +10,9 @@ export const textareaVariants = cva(
     variants: {
       color: {
         default:
-          "border-default-300 text-default-500 focus:outline-hidden focus:border-primary disabled:bg-default-200  placeholder:text-accent-foreground/50",
+          "border-default-300 text-default-500 focus:outline-hidden focus:border-[#1b776f] disabled:bg-default-200  placeholder:text-accent-foreground/50",
         primary:
-          "border-primary text-primary focus:outline-hidden focus:border-primary-700 disabled:bg-primary/30 disabled:placeholder:text-primary  placeholder:text-primary/70",
+          "border-[#1b776f] text-primary focus:outline-hidden focus:border-[#1b776f] disabled:bg-primary/30 disabled:placeholder:text-primary  placeholder:text-primary/70",
         info: "border-info/50 text-info focus:outline-hidden focus:border-info-700 disabled:bg-info/30 disabled:placeholder:text-info  placeholder:text-info/70",
         warning:
           "border-warning/50 text-warning focus:outline-hidden focus:border-warning-700 disabled:bg-warning/30 disabled:placeholder:text-info  placeholder:text-warning/70",

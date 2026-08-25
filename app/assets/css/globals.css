@@ -1410,6 +1410,12 @@ body {
 .rounded-md {
   border-radius: calc(var(--radius) - 2px);
 }
+.rounded-none {
+  border-radius: 0;
+}
+.px-l-none{
+  padding-left: 0;
+}
 .rounded-sm {
   border-radius: calc(var(--radius) - 4px);
 }
