@@ -194,7 +194,7 @@ export default function Page() {
 
       <form onSubmit={handleSubmit}>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4 w-[60%]">
 
 
           {/* ================================================= */}
@@ -309,11 +309,7 @@ export default function Page() {
               {/* --------------------------------------------- */}
 
               <Label
-                className={
-                  module.name.length > 20
-                    ? "lg:max-w-[160px] leading-[18px]"
-                    : "lg:min-w-[160px]"
-                }
+                className={ "lg:min-w-[160px] lg:max-w-[160px] leading-[18px]"}
               >
                 {module.name}
               </Label>
@@ -324,7 +320,7 @@ export default function Page() {
               {/* PERMISSIONS */}
               {/* --------------------------------------------- */}
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-between w-[100%]">
 
 
                 {/* ========================================= */}
