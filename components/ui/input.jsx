@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 //py-[10px]
 export const inputVariants = cva(
-  " w-full   bg-[#F5F5F5]  border-border  px-3 h-9   text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium  read-only:leading-9 read-only:bg-background  disabled:cursor-not-allowed disabled:opacity-50  transition duration-300 ",
+  " w-full   border-border  px-3 h-9   text-sm  file:border-0 file:bg-transparent file:text-sm file:font-medium  read-only:leading-9 read-only:bg-background  disabled:cursor-not-allowed disabled:opacity-50  transition duration-300 ",
   {
     variants: {
       color: {

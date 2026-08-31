@@ -254,6 +254,7 @@ export default function Page() {
                 type="text"
                 placeholder="Enter role name"
                 id="roleName"
+                 className="bg-[#F5F5F5]"
                 value={roleName}
                 onChange={(e) =>
                   setRoleName(e.target.value)
