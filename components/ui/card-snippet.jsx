@@ -22,7 +22,7 @@ import { themes } from "@/config/themes";
 import { useTheme } from "next-themes";
 import { hslToHex, hexToRGB } from "@/lib/utils";
 import { useThemeStore } from "@/store";
-const CardSnippet = ({ title, code, children }) => {
+const CardSnippet = ({ title, code, children,breadcrumbdata }) => {
   const [show, setShow] = useState(false);
   const toggle = () => {
     setShow(!show);
@@ -45,14 +45,30 @@ const CardSnippet = ({ title, code, children }) => {
   return (
     <Card>
       <CardHeader className="flex flex-row items-center">
+      {
+        breadcrumbdata && (
+          <div className="breadcrumb">
+            {breadcrumbdata.map((item, index) => (
+              <React.Fragment key={index} >
+                <a className="text-[#1b776f]" href={item.link}>{item.title}</a>
+
+                {index < breadcrumbdata.length - 1 && (
+                  <span className="mx-2 text-[#1b776f]">/</span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        )
+      }
         {title && (
-          <CardTitle className="flex-1 leading-normal"> {title}</CardTitle>
+          <CardTitle className="flex-1 leading-normal "> {title}</CardTitle>
         )}
         {code && (
           <div className="flex-none">
             <Switch id="airplane-mode" onClick={toggle} />
           </div>
         )}
+        
       </CardHeader>
       <CardContent>
         {children}

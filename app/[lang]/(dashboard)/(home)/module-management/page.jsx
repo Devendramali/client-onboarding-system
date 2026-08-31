@@ -20,10 +20,14 @@ const Page = () => {
 
   return (<>
     <div className="space-y-6">
-      <Card title="Module Management" >
+      <Card  breadcrumbdata={[
+          { title: "Dashboard", link: "/" },
+          { title: "Module Management", link: "/module-management" },
+          // { title: "Add Role", link: "/role-management/add" },
+        ]} >
         <div className="flex flex-wrap items-center gap-4 mb-5">
           <div className="flex-1">
-            <h3 className="text-xl font-medium text-default-700 mb-2">
+            <h3 className="text-xl font-medium text-[#1b776f] mb-2">
               Module Management
             </h3>
           </div>

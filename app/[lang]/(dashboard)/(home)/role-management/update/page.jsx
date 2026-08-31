@@ -7,6 +7,17 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 
 import {
   InputGroup,
@@ -190,18 +201,37 @@ export default function Page() {
 
   return (
 
-    <Card title="Update Role">
+    <Card   breadcrumbdata={[
+          { title: "Dashboard", link: "/" },
+          { title: "Role Management", link: "/role-management" },
+          { title: "Update Role", link: "" },
+        ]}>
+           <div className="flex flex-wrap items-center gap-4 mb-5">
+              <div className="flex-1">
+                <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Update Role</h3>
+              </div>
+          </div>
 
       <form onSubmit={handleSubmit}>
 
-        <div className="grid grid-cols-2 gap-4 w-[60%]">
+        <div className="grid grid-cols-2 gap-4 ">
+          
+          <div className="col-span-2 flex flex-col gap-2 lg:flex-row lg:items-center">
+
+            <Label
+              className="lg:min-w-[160px] text-[20px] text-[#1b776f]"
+            >
+              Basic Information
+            </Label>
+
+          </div>
 
 
           {/* ================================================= */}
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-2 flex flex-col gap-2 lg:flex-row lg:items-center">
+          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -213,11 +243,11 @@ export default function Page() {
 
             <InputGroup merged>
 
-              <InputGroupText>
+              {/* <InputGroupText>
 
                 <Icon icon="mdi:user" />
 
-              </InputGroupText>
+              </InputGroupText> */}
 
 
               <Input
@@ -240,7 +270,7 @@ export default function Page() {
           {/* DESCRIPTION */}
           {/* ================================================= */}
 
-          <div className="col-span-2 flex flex-col gap-2 lg:flex-row lg:items-start">
+          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-start">
 
             <Label
               htmlFor="description"
@@ -252,19 +282,19 @@ export default function Page() {
 
             <InputGroup merged>
 
-              <InputGroupText>
+              {/* <InputGroupText>
 
                 <Icon
                   icon="material-symbols-light:description-rounded"
                 />
 
-              </InputGroupText>
+              </InputGroupText> */}
 
 
               <Textarea
                 id="description"
                 placeholder="Enter role description"
-                className="border-l-0 rounded-none px-l-none py-[9px] text-xs"
+                className=" py-[9px] text-xs bg-[#F5F5F5]"
                 value={description}
                 onChange={(e) =>
                   setDescription(e.target.value)
@@ -281,10 +311,10 @@ export default function Page() {
           {/* PERMISSION TITLE */}
           {/* ================================================= */}
 
-          <div className="col-span-2 flex flex-col gap-2 lg:flex-row lg:items-center">
+          <div className="col-span-2 flex flex-col gap-4 lg:flex-row lg:items-center">
 
             <Label
-              className="lg:min-w-[160px] text-[18px] text-[#1b776f]"
+              className="lg:min-w-[160px] text-[20px] text-[#1b776f]"
             >
               Permissions
             </Label>
@@ -297,194 +327,212 @@ export default function Page() {
           {/* MODULE PERMISSIONS */}
           {/* ================================================= */}
 
-          {modules.map((module) => (
+       {modules.map((module) => {
+  const modulePermission = permissions[module.id] || {
+    view: false,
+    add: false,
+    edit: false,
+    delete: false,
+  };
 
-            <div
-              key={module.id}
-              className="col-span-2 flex flex-col gap-2 lg:flex-row lg:items-center"
-            >
+  return (
+    <div
+      key={module.id}
+      className="col-span-2 flex flex-col gap-3"
+    >
+      {/* MODULE NAME */}
+      <Label
+        className="text-[16px] font-medium text-foreground"
+      >
+        {module.name}
+      </Label>
 
-              {/* --------------------------------------------- */}
-              {/* MODULE NAME */}
-              {/* --------------------------------------------- */}
+      {/* PERMISSIONS */}
+      <div className="flex flex-wrap gap-3">
 
-              <Label
-                className={ "lg:min-w-[160px] lg:max-w-[160px] leading-[18px]"}
-              >
-                {module.name}
-              </Label>
+        {/* VIEW */}
+        <div
+          className={`flex items-center gap-2 rounded-md px-3 py-2 transition-all ${
+            modulePermission.view
+              ? "bg-teal-50"
+              : "bg-muted/60"
+          }`}
+        >
+          <Checkbox
+            id={`${module.id}-view`}
+            size="sm"
+            color="default"
+            checked={modulePermission.view}
+            onCheckedChange={() =>
+              handlePermissionChange(module.id, "view")
+            }
+            className={
+              modulePermission.view
+                ? "border-teal-600 bg-teal-600 text-white"
+                : ""
+            }
+          />
 
-
-
-              {/* --------------------------------------------- */}
-              {/* PERMISSIONS */}
-              {/* --------------------------------------------- */}
-
-              <div className="flex flex-wrap gap-4 justify-between w-[100%]">
-
-
-                {/* ========================================= */}
-                {/* VIEW */}
-                {/* ========================================= */}
-
-                <div className="flex lg:items-center gap-1.5">
-
-                  <Checkbox
-                    id={`${module.id}-view`}
-                    size="sm"
-                    color="default"
-                    checked={
-                      permissions[module.id].view
-                    }
-                    onCheckedChange={() =>
-                      handlePermissionChange(
-                        module.id,
-                        "view"
-                      )
-                    }
-                  />
-
-                  <Label
-                    htmlFor={`${module.id}-view`}
-                    className="text-base text-muted-foreground font-normal"
-                  >
-                    View
-                  </Label>
-
-                </div>
-
-
-
-                {/* ========================================= */}
-                {/* ADD */}
-                {/* ========================================= */}
-
-                <div className="flex lg:items-center gap-1.5">
-
-                  <Checkbox
-                    id={`${module.id}-add`}
-                    size="sm"
-                    color="default"
-                    checked={
-                      permissions[module.id].add
-                    }
-                    onCheckedChange={() =>
-                      handlePermissionChange(
-                        module.id,
-                        "add"
-                      )
-                    }
-                  />
-
-                  <Label
-                    htmlFor={`${module.id}-add`}
-                    className="text-base text-muted-foreground font-normal"
-                  >
-                    Add
-                  </Label>
-
-                </div>
+          <Label
+            htmlFor={`${module.id}-view`}
+            className={`cursor-pointer text-[16px] font-normal ${
+              modulePermission.view
+                ? "text-teal-700"
+                : "text-foreground"
+            }`}
+          >
+            View
+          </Label>
+        </div>
 
 
+        {/* ADD */}
+        <div
+          className={`flex items-center gap-2 rounded-md px-3 py-2 transition-all ${
+            modulePermission.add
+              ? "bg-teal-50"
+              : "bg-muted/60"
+          }`}
+        >
+          <Checkbox
+            id={`${module.id}-add`}
+            size="sm"
+            color="default"
+            checked={modulePermission.add}
+            onCheckedChange={() =>
+              handlePermissionChange(module.id, "add")
+            }
+            className={
+              modulePermission.add
+                ? "border-teal-600 bg-teal-600 text-white"
+                : ""
+            }
+          />
 
-                {/* ========================================= */}
-                {/* EDIT */}
-                {/* ========================================= */}
-
-                <div className="flex lg:items-center gap-1.5">
-
-                  <Checkbox
-                    id={`${module.id}-edit`}
-                    size="sm"
-                    color="default"
-                    checked={
-                      permissions[module.id].edit
-                    }
-                    onCheckedChange={() =>
-                      handlePermissionChange(
-                        module.id,
-                        "edit"
-                      )
-                    }
-                  />
-
-                  <Label
-                    htmlFor={`${module.id}-edit`}
-                    className="text-base text-muted-foreground font-normal"
-                  >
-                    Edit
-                  </Label>
-
-                </div>
-
-
-
-                {/* ========================================= */}
-                {/* DELETE */}
-                {/* ========================================= */}
-
-                <div className="flex lg:items-center gap-1.5">
-
-                  <Checkbox
-                    id={`${module.id}-delete`}
-                    size="sm"
-                    color="default"
-                    checked={
-                      permissions[module.id].delete
-                    }
-                    onCheckedChange={() =>
-                      handlePermissionChange(
-                        module.id,
-                        "delete"
-                      )
-                    }
-                  />
-
-                  <Label
-                    htmlFor={`${module.id}-delete`}
-                    className="text-base text-muted-foreground font-normal"
-                  >
-                    Delete
-                  </Label>
-
-                </div>
+          <Label
+            htmlFor={`${module.id}-add`}
+            className={`cursor-pointer text-[16px] font-normal ${
+              modulePermission.add
+                ? "text-teal-700"
+                : "text-foreground"
+            }`}
+          >
+            Add
+          </Label>
+        </div>
 
 
+        {/* EDIT */}
+        <div
+          className={`flex items-center gap-2 rounded-md px-3 py-2 transition-all ${
+            modulePermission.edit
+              ? "bg-teal-50"
+              : "bg-muted/60"
+          }`}
+        >
+          <Checkbox
+            id={`${module.id}-edit`}
+            size="sm"
+            color="default"
+            checked={modulePermission.edit}
+            onCheckedChange={() =>
+              handlePermissionChange(module.id, "edit")
+            }
+            className={
+              modulePermission.edit
+                ? "border-teal-600 bg-teal-600 text-white"
+                : ""
+            }
+          />
 
-                {/* ========================================= */}
-                {/* SELECT ALL */}
-                {/* ========================================= */}
+          <Label
+            htmlFor={`${module.id}-edit`}
+            className={`cursor-pointer text-[16px] font-normal ${
+              modulePermission.edit
+                ? "text-teal-700"
+                : "text-foreground"
+            }`}
+          >
+            Edit
+          </Label>
+        </div>
 
-                <div className="flex lg:items-center gap-1.5">
 
-                  <Checkbox
-                    id={`${module.id}-select-all`}
-                    size="sm"
-                    color="default"
-                    checked={isSelectAllChecked(
-                      module.id
-                    )}
-                    onCheckedChange={() =>
-                      handleSelectAll(
-                        module.id
-                      )
-                    }
-                  />
+        {/* DELETE */}
+        <div
+          className={`flex items-center gap-2 rounded-md px-3 py-2 transition-all ${
+            modulePermission.delete
+              ? "bg-teal-50"
+              : "bg-muted/60"
+          }`}
+        >
+          <Checkbox
+            id={`${module.id}-delete`}
+            size="sm"
+            color="default"
+            checked={modulePermission.delete}
+            onCheckedChange={() =>
+              handlePermissionChange(module.id, "delete")
+            }
+            className={
+              modulePermission.delete
+                ? "border-teal-600 bg-teal-600 text-white"
+                : ""
+            }
+          />
 
-                  <Label
-                    htmlFor={`${module.id}-select-all`}
-                    className="text-base text-muted-foreground font-normal"
-                  >
-                    Select All
-                  </Label>
+          <Label
+            htmlFor={`${module.id}-delete`}
+            className={`cursor-pointer text-[16px] font-normal ${
+              modulePermission.delete
+                ? "text-teal-700"
+                : "text-foreground"
+            }`}
+          >
+            Delete
+          </Label>
+        </div>
 
-                </div>
 
-              </div>
+        {/* SELECT ALL */}
+        <div
+          className={`flex items-center gap-2 rounded-md px-3 py-2 transition-all ${
+            isSelectAllChecked(module.id)
+              ? "bg-teal-50"
+              : "bg-muted/60"
+          }`}
+        >
+          <Checkbox
+            id={`${module.id}-select-all`}
+            size="sm"
+            color="default"
+            checked={isSelectAllChecked(module.id)}
+            onCheckedChange={() =>
+              handleSelectAll(module.id)
+            }
+            className={
+              isSelectAllChecked(module.id)
+                ? "border-teal-600 bg-teal-600 text-white"
+                : ""
+            }
+          />
 
-            </div>
+          <Label
+            htmlFor={`${module.id}-select-all`}
+            className={`cursor-pointer text-[16px] font-normal ${
+              isSelectAllChecked(module.id)
+                ? "text-teal-700"
+                : "text-foreground"
+            }`}
+          >
+            Select All
+          </Label>
+        </div>
 
-          ))}
+      </div>
+    </div>
+  );
+})}
 
 
 
@@ -492,11 +540,62 @@ export default function Page() {
           {/* SUBMIT */}
           {/* ================================================= */}
 
-          <div className="col-span-2 lg:pl-[160px]">
+          <div className="col-span-2 flex gap-3">
 
-            <Button type="submit">
-              Submit
+            <Button className="bg-[#5A5A5A]" type="submit">
+              Discard
             </Button>
+            <AlertDialog>
+                        <AlertDialogTrigger asChild>
+                          <Button
+                          >
+                            Submit
+                          </Button>
+                        </AlertDialogTrigger>
+                        <AlertDialogContent>
+                          <AlertDialogHeader>
+                            <h3 className="text-xl font-medium text-[#1b776f]  mb-[32px]">Confirm New Role </h3>
+                            <div>
+                              <div className="">
+                                <h4 className="text-[16px] text-[#757575]">Role Name:</h4>
+                                <h3 className="text-[#1E1E1E] text-[20px]">sacsacavadvdsv</h3>
+                              </div>
+                              <div className="mt-[24px]">
+                                <h4 className="text-[16px] text-[#757575]">Role Description:</h4>
+                                <h3 className="text-[#1E1E1E] text-[20px]">asvdavnj dsv sj bs dvbjd v sdv kaaev fwevdsvsdf</h3>
+                              </div>
+
+                              <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2>
+                               <div className="mt-[24px]">
+                                <h4 className="text-[16px] text-[#757575] mb-0">User Management Perimissions:</h4>
+                                <h3 className="text-[#1E1E1E] flex gap-4 text-[20px]">
+                                  <span>View</span>
+                                  <span>Add</span>
+                                  <span>Edit</span>
+                                  <span>Delete</span>
+                                  </h3>
+                              </div>
+                               <div className="mt-[20px]">
+                                <h4 className="text-[16px] text-[#757575] mb-0">Billing Management Perimissions:</h4>
+                                <h3 className="text-[#1E1E1E] flex gap-4 text-[20px]">
+                                  <span>View</span>
+                                  <span>Add</span>
+                                  <span>Edit</span>
+                                  <span>Delete</span>
+                                  </h3>
+                              </div>
+                            </div>
+                          </AlertDialogHeader>
+                          <AlertDialogFooter>
+                            <AlertDialogCancel  className="bg-[#5A5A5A]">
+                              Go back and Edit
+                            </AlertDialogCancel>
+                            <a href="/role-management" className="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px] bg-[#1A766D]">
+                              Confirm and Add Role
+                            </a>
+                          </AlertDialogFooter>
+                        </AlertDialogContent>
+                      </AlertDialog>
 
           </div>
 
@@ -504,6 +603,7 @@ export default function Page() {
         </div>
 
       </form>
+
 
     </Card>
 

@@ -11,7 +11,7 @@ const LogoutFooter = ({ menus }) => {
     <>
       {/* <AddBlock /> */}
 
-      <div className=" bg-default-50 dark:bg-default-200 items-center flex gap-3  px-4 py-2 mt-5">
+      {/* <div className=" bg-default-50 dark:bg-default-200 items-center flex gap-3  px-4 py-2 mt-5">
         <div className="flex-1">
           <div className=" text-default-700 font-semibold text-sm capitalize mb-0.5 truncate">
             {session?.user?.name}
@@ -32,7 +32,7 @@ const LogoutFooter = ({ menus }) => {
             />
           </button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

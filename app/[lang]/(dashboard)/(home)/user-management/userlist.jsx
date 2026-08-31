@@ -31,13 +31,17 @@ import {
 const Userlist = () => {
   return (
    <div className=" space-y-6">
-      <Card>
+      <Card  breadcrumbdata={[
+          { title: "Dashboard", link: "/" },
+          { title: "User Management", link: "/user-management" },
+          // { title: "Add Role", link: "/role-management/add" },
+        ]}>
         <div className="flex flex-wrap items-center gap-4 mb-5">
           <div className="flex-1">
-            <h3 className="text-xl font-medium text-default-700 mb-2">User List</h3>
+            <h3 className="text-xl font-medium text-[#1b776f] mb-2">User List</h3>
           </div>
           <div className="flex-none">
-            <a href="/usermodule/add" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" >Add User</a>
+            <a href="/user-management/add" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" >Add User</a>
           </div>
         </div>
            
@@ -94,7 +98,7 @@ const Userlist = () => {
 
                           <TableCell className="flex gap-3">
                            
-                            <a href="/usermodule/update" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer dark:text-default-950 border bg-transparent hover:text-primary-foreground text-muted-foreground dark:bg-transparent hover:bg-default-500 dark:hover:bg-default-500/50 border-default-500 h-7 w-7">
+                            <a href="/user-management/update" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer dark:text-default-950 border bg-transparent hover:text-primary-foreground text-muted-foreground dark:bg-transparent hover:bg-default-500 dark:hover:bg-default-500/50 border-default-500 h-7 w-7">
                               <Icon icon="heroicons:pencil" className="h-4 w-4" />
                             </a>
 

@@ -995,8 +995,8 @@ export const menusConfig = {
             icon: Graph,
           },
           {
-            title: "User List",
-            href: "/usermodule",
+            title: "User Management",
+            href: "/user-management",
             icon: Graph,
           },
           {

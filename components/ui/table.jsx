@@ -3,10 +3,10 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const Table = React.forwardRef(({ className, wrapperClass, ...props }, ref) => (
-  <div className={cn("overflow-x-auto", wrapperClass)}>
+  <div className={cn("overflow-x-auto bg-[#ECECEC] py-[10px] px-[25px] rounded-[24px]", wrapperClass)}>
     <table
       ref={ref}
-      className={cn("w-full caption-top text-sm ", className)}
+      className={cn("w-full caption-top text-sm  ", className)}
       {...props}
     />
   </div>
@@ -52,7 +52,7 @@ const TableHead = React.forwardRef(({ className, ...props }, ref) => (
   <th
     ref={ref}
     className={cn(
-      "h-14 px-4  ltr:text-left rtl:text-right last:ltr:text-right last:rtl:text-left align-middle font-semibold  text-sm  text-default-800    capitalize  [&:has([role=checkbox])]:ltr:pr-0 [&:has([role=checkbox])]:rtl:pl-0",
+      "h-14 px-4  ltr:text-left rtl:text-right  align-middle font-semibold  text-sm  text-[#1A766D]    capitalize  [&:has([role=checkbox])]:ltr:pr-0 [&:has([role=checkbox])]:rtl:pl-0",
       className
     )}
     {...props}
@@ -64,7 +64,7 @@ const TableCell = React.forwardRef(({ className, ...props }, ref) => (
   <td
     ref={ref}
     className={cn(
-      "p-4 align-middle  text-sm text-default-600 last:text-right last:rtl:text-left font-normal  [&:has([role=checkbox])]:ltr:pr-0 [&:has([role=checkbox])]:rtl:pl-0",
+      "p-4 align-middle  text-[16px] text-[#303030] font-[500]  [&:has([role=checkbox])]:ltr:pr-0 [&:has([role=checkbox])]:rtl:pl-0",
       className
     )}
     {...props}

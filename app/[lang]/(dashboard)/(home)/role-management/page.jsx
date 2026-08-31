@@ -31,10 +31,13 @@ import {
 export default function Page() {
   return (
    <div className=" space-y-6">
-      <Card >
+      <Card breadcrumbdata={[
+          { title: "Dashboard", link: "/" },
+          { title: "Role Management", link: "/role-management" },
+        ]}>
         <div className="flex flex-wrap items-center gap-4 mb-5">
           <div className="flex-1">
-            <h3 className="text-xl font-medium text-default-700 mb-2">Role Management</h3>
+            <h3 className="text-xl font-medium text-[#1b776f]  mb-2">Role Management</h3>
           </div>
           <div className="flex-none">
             <a href="/role-management/add" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" >Add Role</a>
@@ -52,7 +55,7 @@ export default function Page() {
                         {/* <TableHead className="font-semibold">Designation</TableHead> */}
                         {/* <TableHead className="font-semibold">Role</TableHead> */}
                         <TableHead className="font-semibold">Status</TableHead>
-                        <TableHead className="font-semibold text-left">Action</TableHead>
+                        <TableHead className="font-semibold !text-left">Action</TableHead>
                       </TableRow>
                     </TableHeader>
 

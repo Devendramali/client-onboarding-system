@@ -62,8 +62,8 @@ const LogInForm = () => {
         redirect: false,
       });
       if (response?.ok) {
-        toast.success("Login Successful");
-        window.location.assign("/dashboard");
+        toast.success("OTP Send On Mail");
+        window.location.assign("/auth/verify");
         reset();
       } else if (response?.error) {
         toast.error(response?.error);
@@ -73,10 +73,15 @@ const LogInForm = () => {
   return (
     <div className="w-full ">
       <Link href="/dashboard" className="inline-block">
-        <SiteLogo className="h-10 w-10 2xl:w-14 2xl:h-14 text-primary" />
+         <Image
+          src="/images/all-img/logo.svg"
+          alt="DigiHost Logo"
+          width={156}
+          height={56}
+        />
       </Link>
       <div className="2xl:mt-8 mt-6 2xl:text-3xl text-2xl font-bold text-default-900">
-        Hey, Hello 👋
+        Log in
       </div>
       <div className="2xl:text-lg text-base text-default-600 mt-2 leading-6">
         Enter the information you entered while registering.
@@ -166,7 +171,7 @@ const LogInForm = () => {
               Remember me
             </Label>
           </div>
-          <Link href="/auth/forgot4" className="flex-none text-sm text-primary">
+          <Link href="/auth/forgot" className="flex-none text-sm text-[#1b776f]">
             Forget Password?
           </Link>
         </div>
@@ -176,10 +181,10 @@ const LogInForm = () => {
           size={!isDesktop2xl ? "lg" : "md"}
         >
           {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          {isPending ? "Loading..." : "Sign In"}
+          {isPending ? "Loading..." : "Log In"}
         </Button>
       </form>
-      <div className="mt-8 flex flex-wrap justify-center gap-4">
+      {/* <div className="mt-8 flex flex-wrap justify-center gap-4">
         <Button
           type="button"
           size="icon"
@@ -225,12 +230,12 @@ const LogInForm = () => {
         >
           <Image src={twitter} alt="google" className="w-5 h-5" />
         </Button>
-      </div>
+      </div> */}
       <div className="mt-6 text-center text-base text-default-600">
         Don't have an account?{" "}
-        <Link href="/auth/register4" className="text-primary">
+        <Link href="#!" className="text-[#1b776f]">
           {" "}
-          Sign Up{" "}
+          Contact Admin{" "}
         </Link>
       </div>
     </div>

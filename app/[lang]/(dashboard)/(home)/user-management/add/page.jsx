@@ -68,7 +68,16 @@ export default function Page() {
 
   return (
 
-    <Card title="Add User">
+    <Card breadcrumbdata={[
+          { title: "Dashboard", link: "/" },
+          { title: "User Management", link: "/user-management" },
+          { title: "Add User", link: "/user-management/add" },
+        ]}>
+           <div className="flex flex-wrap items-center gap-4 mb-5">
+              <div className="flex-1">
+                <h3 className="text-xl text-[#1b776f] font-medium  mb-2">Add User</h3>
+              </div>
+          </div>
 
       <form >
 
