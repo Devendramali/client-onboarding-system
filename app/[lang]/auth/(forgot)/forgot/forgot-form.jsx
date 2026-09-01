@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { SiteLogo } from "@/components/svg";
+// import { SiteLogo } from "@/components/svg";
 import Image from "next/image";
 const schema = z.object({
   email: z.string().email({ message: "Your email is invalid." }),
@@ -38,52 +38,44 @@ const ForgotForm = () => {
     startTransition(async () => {
       toast.success("Password Reset code has been sent to your email");
       reset();
-      router.push("/auth/create-password4");
+      router.push("/auth/create-password");
     });
   };
   return (
-    <div className="w-full">
+    <div className="w-full paddingtop">
       <Link href="/dashboard" className="inline-block">
-           <Image
-                  src="/images/all-img/logo.png"
-                  alt="DigiHost Logo"
-                  width={156}
-                  height={56}
-                />
+          <Image
+            src="/images/all-img/logo.png"
+            alt="DigiHost Logo"
+            width={156}
+            height={56}
+          />
       </Link>
       <div className="2xl:mt-8 mt-6 2xl:text-3xl text-2xl font-bold text-default-900">
-        Forget Your Password?
+        Forgot your password?
       </div>
       <div className="2xl:text-lg text-base text-default-600 mt-2 leading-6">
-        Enter your email & instructions will be sent to you!
+        Enter your email and we'll send you an OTP to reset your password
       </div>
-
       <form onSubmit={handleSubmit(onSubmit)} className="mt-5 xl:mt-7">
-        <div className="relative">
+        <div>
+          <Label htmlFor="email" className="mb-2 font-medium text-default-600">
+            Email{" "}
+          </Label>
           <Input
-            removeWrapper
-            type="email"
-            id="email"
-            size={!isDesktop2xl ? "xl" : "lg"}
-            placeholder=" "
             disabled={isPending}
             {...register("email")}
-            className={cn("peer", {
+            type="email"
+            id="email"
+            className={cn("", {
               "border-destructive": errors.email,
             })}
+            size={!isDesktop2xl ? "xl" : "lg"}
           />
-          <Label
-            htmlFor="email"
-            className="absolute text-base text-default-600  duration-300 transform -translate-y-5 scale-75 top-2 z-10 origin-[0]   bg-background  px-2 peer-focus:px-2
-               peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 
-               peer-focus:-translate-y-4 peer-focus:rtl:translate-x-1/4 peer-focus:rtl:left-auto start-1"
-          >
-            Email
-          </Label>
+          {errors.email && (
+            <div className=" text-destructive mt-2">{errors.email.message}</div>
+          )}
         </div>
-        {errors.email && (
-          <div className=" text-destructive mt-2">{errors.email.message}</div>
-        )}
 
         <Button className="w-full mt-6" size={!isDesktop2xl ? "lg" : "md"}>
           {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
@@ -91,10 +83,9 @@ const ForgotForm = () => {
         </Button>
       </form>
       <div className="mt-5 2xl:mt-8 text-center text-base text-default-600">
-        Back to{" "}
+       Back to {" "}
         <Link href="/auth/login" className="text-[#1b776f]">
-          {" "}
-         Login{" "}
+        Login
         </Link>
       </div>
     </div>
