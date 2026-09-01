@@ -51,7 +51,7 @@ const Userlist = () => {
                  <Table>
                    <TableHeader>
                       <TableRow>
-                        <TableHead className="font-semibold">Serial No.</TableHead>
+                        <TableHead className="font-semibold">Sr No.</TableHead>
                         <TableHead className="font-semibold">Full Name</TableHead>
                         <TableHead className="font-semibold">Email Address</TableHead>
                         {/* <TableHead className="font-semibold">Mobile Number</TableHead> */}
