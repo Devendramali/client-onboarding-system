@@ -68,27 +68,36 @@ export default function Page() {
 
   return (
 
-    <Card  breadcrumbdata={[
+    <Card breadcrumbdata={[
           { title: "Dashboard", link: "/" },
           { title: "User Management", link: "/user-management" },
-          { title: "Update User", link: "/user-management/update" },
+          { title: "Add User", link: "/user-management/add" },
         ]}>
-             <div className="flex flex-wrap items-center gap-4 mb-5">
+           <div className="flex flex-wrap items-center gap-4 mb-5">
               <div className="flex-1">
-                <h3 className="text-xl text-[#1b776f] font-medium  mb-2">Update User</h3>
+                <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Update User</h3>
               </div>
           </div>
 
       <form >
 
-        <div className="grid grid-cols-2 gap-4 w-[60%]">
+        <div className="grid grid-cols-2 gap-[24px] border border-[#D9D9D9] border-[1px] rounded-[16px] p-[16px]">
+          <div className="col-span-2 flex flex-col gap-4 lg:flex-row lg:items-center">
+
+            <Label
+              className="lg:min-w-[160px] text-[20px] text-[#1b776f]"
+            >
+              Basic Information
+            </Label>
+
+          </div>
 
 
           {/* ================================================= */}
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-2 flex flex-col gap-2 lg:flex-row lg:items-center">
+          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -100,17 +109,18 @@ export default function Page() {
 
             <InputGroup merged>
 
-              <InputGroupText>
+              {/* <InputGroupText>
 
                 <Icon icon="mdi:user" />
 
-              </InputGroupText>
+              </InputGroupText> */}
 
 
               <Input
                 type="text"
                 placeholder="Enter Full Name"
                 id="roleName"
+                className="bg-[#F5F5F5]"
                
               />
 
@@ -123,7 +133,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-2 flex flex-col gap-2 lg:flex-row lg:items-center">
+          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -135,17 +145,18 @@ export default function Page() {
 
             <InputGroup merged>
 
-              <InputGroupText>
+              {/* <InputGroupText>
 
                 <Icon icon="mdi:email" />
 
-              </InputGroupText>
+              </InputGroupText> */}
 
 
               <Input
                 type="text"
                 placeholder="Enter Email Address"
                 id="roleName"
+                className="bg-[#F5F5F5]"
               
               />
 
@@ -155,7 +166,7 @@ export default function Page() {
 
 
 
-          <div className="col-span-2 flex flex-col gap-2 lg:flex-row lg:items-center">
+          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -167,17 +178,18 @@ export default function Page() {
 
             <InputGroup merged>
 
-              <InputGroupText>
+              {/* <InputGroupText>
 
                 <Icon icon="mdi:call" />
 
-              </InputGroupText>
+              </InputGroupText> */}
 
 
               <Input
                 type="text"
                 placeholder="Enter Mobile Number"
                 id="roleName"
+                className="bg-[#F5F5F5]"
              
               />
 
@@ -185,13 +197,13 @@ export default function Page() {
 
           </div>
 
-            <div className="col-span-2  flex flex-col lg:items-center lg:flex-row gap-2">
+          <div className="col-span-1  flex flex-col lg:items-left lg:flex-col gap-2">
               <Label htmlFor="state" className="lg:min-w-[160px]">Role </Label>
-              <Select>
-                <SelectTrigger>
+              <Select  className="">
+                <SelectTrigger className="!bg-[#F5F5F5]">
                   <SelectValue placeholder="Select State" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent  className="">
                   <SelectItem value="alberta">Alberta</SelectItem>
                   <SelectItem value="british">British Columbia</SelectItem>
                   <SelectItem value="manitoba">Manitoba</SelectItem>
@@ -201,17 +213,7 @@ export default function Page() {
               </Select>
             </div>
 
-        <div className="col-span-2 lg:pl-[164px] gap-2">
-          <div className="flex lg:items-center gap-1.5">
-            <Checkbox id="term6" size="sm" color="default" />
-            <Label
-              htmlFor="term6"
-              className="text-base text-muted-foreground font-normal"
-            >
-            Send Login Credentials
-            </Label>
-          </div>
-        </div>
+      
 
 
 
@@ -237,16 +239,29 @@ export default function Page() {
           {/* SUBMIT */}
           {/* ================================================= */}
 
-          <div className="col-span-2 lg:pl-[160px]">
+     
 
+
+        </div>
+        <div className="flex lg:items-left gap-1.5 mt-[24px]">
+            <Checkbox id="term6" size="sm" color="default" />
+            <Label
+              htmlFor="term6"
+              className="text-base text-muted-foreground font-normal"
+            >
+            Send Login Credentials
+            </Label>
+          </div>
+               <div className=" mt-[36px] flex gap-4">
+
+            <Button className="bg-[#5A5A5A]" type="submit">
+              Discard
+            </Button>
             <Button type="submit">
               Submit
             </Button>
 
           </div>
-
-
-        </div>
 
       </form>
 

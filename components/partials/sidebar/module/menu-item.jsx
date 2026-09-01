@@ -21,11 +21,11 @@ function NavLink({ childItem, locationName, trans }) {
         }
       )}
     >
-      {icon && (
+      {/* {icon && (
         <span className="inline-flex items-center   grow-0">
           <childItem.icon className=" h-5 w-5" />
         </span>
-      )}
+      )} */}
       <div className="grow truncate">{translate(title, trans)}</div>
       {badge && <Badge className="rounded h-min ">{badge}</Badge>}
     </Link>

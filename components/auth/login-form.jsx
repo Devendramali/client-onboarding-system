@@ -12,7 +12,7 @@ import toast from "react-hot-toast";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
-// import  SiteLogo  from "@/components/svg/duel-tone/digihost-logo.png";
+// import  SiteLogo  from "@/components/svg/duel-tone/digihost-logo.svg";
 import { Icon } from "@iconify/react";
 import { Checkbox } from "@/components/ui/checkbox";
 
@@ -76,7 +76,7 @@ const LogInForm = () => {
     <div className="w-full paddingtop">
       <Link href="/dashboard" className="inline-block">
         <Image
-          src="/images/all-img/logo.svg"
+          src="/images/all-img/logo.png"
           alt="DigiHost Logo"
           width={156}
           height={56}

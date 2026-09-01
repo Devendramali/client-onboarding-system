@@ -74,7 +74,7 @@ const LogInForm = () => {
     <div className="w-full ">
       <Link href="/dashboard" className="inline-block">
          <Image
-          src="/images/all-img/logo.svg"
+          src="/images/all-img/logo.png"
           alt="DigiHost Logo"
           width={156}
           height={56}

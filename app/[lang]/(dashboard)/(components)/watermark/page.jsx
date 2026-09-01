@@ -40,7 +40,7 @@ const WaterMarkPage = () => {
           The <code className="text-primary">image</code> props change the
           watermark text or image .
         </p>
-        <Watermark image="/images/watermark/codeshaperlogo.png">
+        <Watermark image="/images/watermark/codeshaperlogo.svg">
           <div className=" text-muted-foreground text-lg bg-background h-[500px] rounded-lg shadow-[0px_0px_5px_1px_rgba(0,0,0,0.3)] p-6">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum et
             neque esse labore nemo repellendus assumenda. Amet voluptatibus
