@@ -319,7 +319,7 @@ export default function Page() {
                             <AlertDialogCancel  className="bg-[#5A5A5A]">
                               Go back and Edit
                             </AlertDialogCancel>
-                            <a href="/role-management" className="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px] bg-[#1A766D]">
+                            <a href="/user-management" className="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px] bg-[#1A766D]">
                               Confirm and Add User
                             </a>
                           </AlertDialogFooter>
