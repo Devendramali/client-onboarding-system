@@ -42,7 +42,7 @@ const Userlist = () => {
       ]}>
         <div className="flex flex-wrap items-center gap-4 mb-5">
           <div className="flex-1">
-            <h3 className="text-xl font-medium text-[#1b776f] mb-2">User List</h3>
+            <h3 className="text-xl font-medium text-[#1b776f] mb-2">User Management</h3>
           </div>
           <div className="flex-none">
             <a href="/user-management/add" class="inline-flex items-center justify-center rounded-md text-[16px] font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" ><svg className="me-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
