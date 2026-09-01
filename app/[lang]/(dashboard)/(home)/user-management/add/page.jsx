@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React,{ useState } from "react";
 
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -27,11 +27,30 @@ import {
 
 import { Icon } from "@iconify/react";
 import Card from "@/components/ui/card-snippet";
-
+import MultiSelect from "@/components/ui/MultiSelect";
 
 // =====================================================
 // MODULES
 // =====================================================
+
+const roles = [
+  {
+    label: "Role 1",
+    value: "role1",
+  },
+  {
+    label: "Role 2",
+    value: "role2",
+  },
+  {
+    label: "Role 3",
+    value: "role3",
+  },
+  {
+    label: "Role 4",
+    value: "role4",
+  },
+];
 
 
 
@@ -41,6 +60,8 @@ import Card from "@/components/ui/card-snippet";
 // =====================================================
 
 export default function Page() {
+  const [selectedRoles, setSelectedRoles] = useState([]);
+  
 
   
 
@@ -114,7 +135,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-             Full Name
+             Full Name <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -150,7 +171,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-             Email Address
+             Email Address <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -183,7 +204,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-             Mobile Number
+             Mobile Number <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -208,21 +229,21 @@ export default function Page() {
 
           </div>
 
-          <div className="col-span-1  flex flex-col lg:items-left lg:flex-col gap-2">
-              <Label htmlFor="state" className="lg:min-w-[160px]">Role </Label>
-              <Select  className="">
-                <SelectTrigger className="!bg-[#F5F5F5]">
-                  <SelectValue placeholder="Select State" />
-                </SelectTrigger>
-                <SelectContent  className="">
-                  <SelectItem value="alberta">Alberta</SelectItem>
-                  <SelectItem value="british">British Columbia</SelectItem>
-                  <SelectItem value="manitoba">Manitoba</SelectItem>
-                  <SelectItem value="brunswick">New Brunswick</SelectItem>
-                  <SelectItem value="ontario">Ontario</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+  <Label
+    htmlFor="role"
+    className="lg:min-w-[160px]"
+  >
+    Role <span className="text-[#EC221F]">*</span>
+  </Label>
+
+  <MultiSelect
+    options={roles}
+    value={selectedRoles}
+    onChange={setSelectedRoles}
+    placeholder="Select..."
+  />
+</div>
 
       
 
@@ -254,7 +275,7 @@ export default function Page() {
 
 
         </div>
-        <div className="flex lg:items-left gap-1.5 mt-[24px]">
+        <div className="flex lg:items-center gap-1.5 mt-[24px]">
             <Checkbox id="term6" size="sm" color="default" />
             <Label
               htmlFor="term6"
@@ -272,12 +293,13 @@ export default function Page() {
                         <AlertDialogTrigger asChild>
                           <Button
                           >
-                            Submit
+                            Add User
                           </Button>
                         </AlertDialogTrigger>
-                        <AlertDialogContent>
+                        <AlertDialogContent className="max-w-[800px]">
                           <AlertDialogHeader>
                             <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Confirm New User </h3>
+                            <div className="border border-[#D9D9D9] rounded-[16px] p-[16px]">
                             <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Basic Information</h4>
                             <div className="grid grid-cols-2 gap-[24px]">
                               <div className="col-span-1">
@@ -296,12 +318,13 @@ export default function Page() {
                                 <h4 className="text-[16px] text-[#757575]">Role</h4>
                                 <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px]">Admin</h3>
                               </div>
+                              </div>
 
                               {/* <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2> */}
                                
                               
                             </div>
-                              <div className="flex-1 flex  items-center gap-1.5 mt-[26px] mb-[36px]">
+                              <div className="flex-1 flex  items-center gap-1.5 mt-[26px] mb-[20px]">
             <Checkbox
               size="sm"
               className="border-default-300 mt-[1px]"

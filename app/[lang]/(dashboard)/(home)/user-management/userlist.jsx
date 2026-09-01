@@ -41,7 +41,9 @@ const Userlist = () => {
             <h3 className="text-xl font-medium text-[#1b776f] mb-2">User List</h3>
           </div>
           <div className="flex-none">
-            <a href="/user-management/add" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" >Add User</a>
+            <a href="/user-management/add" class="inline-flex items-center justify-center rounded-md text-[16px] font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" ><svg className="me-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M5 12H19M12 5V19" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> Add New User</a>
           </div>
         </div>
            
@@ -98,16 +100,16 @@ const Userlist = () => {
 
                           <TableCell className="flex gap-3">
                            
-                            <a href="/user-management/update" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer dark:text-default-950 border bg-transparent hover:text-primary-foreground text-muted-foreground dark:bg-transparent hover:bg-default-500 dark:hover:bg-default-500/50 border-default-500 h-7 w-7">
-                              <Icon icon="heroicons:pencil" className="h-4 w-4" />
+                            <a href="/user-management/update" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer dark:text-default-950  hover:text-primary-foreground text-muted-foreground dark:bg-transparent hover:bg-default-500 dark:hover:bg-default-500/50 bg-[#fff] border border-[#1A766D] text-[#1A766D] h-7 w-7">
+                              <Icon icon="heroicons:pencil" className="h-4 w-4 text-[#1A766D]" />
                             </a>
 
                             
                             <Button
                               size="icon"
                               variant="outline"
-                              color="secondary"
-                              className="h-7 w-7"
+                              // color="secondary"
+                              className="h-7 w-7 bg-[#fff] border border-[#1A766D] text-[#1A766D]"
                             >
                               <Icon icon="heroicons:eye" className="h-4 w-4" />
                             </Button>
@@ -117,8 +119,8 @@ const Userlist = () => {
                                 <Button
                                   size="icon"
                                   variant="outline"
-                                  className=" h-7 w-7"
-                                  color="secondary"
+                                  className=" h-7 w-7 bg-[#fff] border border-[#1A766D] text-[#1A766D]"
+                                  // color="secondary"
                                 >
                                   <Icon icon="heroicons:trash" className=" h-4 w-4  " />
                                 </Button>
