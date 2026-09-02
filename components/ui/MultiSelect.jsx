@@ -8,6 +8,8 @@ const MultiSelect = ({
   value = [],
   onChange,
   placeholder = "Select...",
+  showAddButton = false,
+  addButton,
 }) => {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -122,6 +124,12 @@ const MultiSelect = ({
               </div>
             );
           })}
+           {/* Add New Button */}
+    {showAddButton && addButton && (
+      <div className="border-t border-[#E5E5E5]">
+        {addButton}
+      </div>
+    )}
         </div>
       )}
     </div>
