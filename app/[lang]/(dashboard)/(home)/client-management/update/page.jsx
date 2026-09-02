@@ -104,11 +104,11 @@ export default function Page() {
     <Card breadcrumbdata={[
       { title: "Dashboard", link: "/" },
       { title: "Billing Account Management", link: "/billing-account-management" },
-      { title: "Edit billing account", link: "/billing-account-management/add" },
+      { title: "Add billing account", link: "/billing-account-management/add" },
     ]}>
       <div className="flex flex-wrap items-center gap-4 mb-5">
         <div className="flex-1">
-          <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Edit new billing account</h3>
+          <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Add new billing account</h3>
         </div>
       </div>
 

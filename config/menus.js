@@ -1000,7 +1000,7 @@ export const menusConfig = {
             icon: Graph,
           },
           {
-            title: "Billing Account Managemen",
+            title: "Billing Account Management",
             href: "/billing-account-management",
             icon: Graph,
           },

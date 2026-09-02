@@ -3,6 +3,10 @@
 import Card from "@/components/ui/card-snippet";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
+
+import { Label } from "@/components/ui/label";
+
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Table,
   TableBody,
@@ -40,7 +44,9 @@ export default function Page() {
             <h3 className="text-xl font-medium text-[#1b776f]  mb-2">Role Management</h3>
           </div>
           <div className="flex-none">
-            <a href="/role-management/add" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" >Add Role</a>
+            <a href="/role-management/add" class="inline-flex items-center justify-center rounded-md text-[16px] font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" ><svg className="me-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M5 12H19M12 5V19" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>Add Role</a>
           </div>
         </div>
            
@@ -48,7 +54,7 @@ export default function Page() {
                  <Table>
                    <TableHeader>
                       <TableRow>
-                        <TableHead className="font-semibold">Serial No.</TableHead>
+                        <TableHead className="font-semibold">Sr No.</TableHead>
                         <TableHead className="font-semibold">Role Name</TableHead>
                         <TableHead className="font-semibold">Description</TableHead>
                         {/* <TableHead className="font-semibold">Department</TableHead> */}
@@ -117,7 +123,7 @@ export default function Page() {
                                         <div className="">
                                            <div className="flex justify-between nx-items-center">
                         
-                                                  <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Confirm New Role  </h3>
+                                                  <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Role  </h3>
                                                   <AlertDialogCancel className="bg-transparent hover:bg-transparent">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                       <path d="M18 6L6 18M6 6L18 18" stroke="#383838" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -147,7 +153,7 @@ export default function Page() {
                         
                                          
                                         <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
-                                          <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Contact</h4>
+                                          <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Permissions </h4>
                                           <div className="grid grid-cols-2 gap-[24px]">
                                         
                                              <div className="col-span-1">
@@ -240,6 +246,15 @@ export default function Page() {
                         
                         
                                         </div>
+                                              <div className="col-span-2 flex lg:items-center gap-1.5  mt-5">
+              <Checkbox id="term6" size="sm" color="default" />
+              <Label
+                htmlFor="term6"
+                className="text-base text-muted-foreground font-normal"
+              >
+                Select all permissions
+              </Label>
+            </div>
                                       
                                      
                                         </div>

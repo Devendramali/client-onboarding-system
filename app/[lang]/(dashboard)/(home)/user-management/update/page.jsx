@@ -103,11 +103,11 @@ export default function Page() {
     <Card breadcrumbdata={[
           { title: "Dashboard", link: "/" },
           { title: "User Management", link: "/user-management" },
-          { title: "Update User", link: "" },
+          { title: "Edit User", link: "" },
         ]}>
            <div className="flex flex-wrap items-center gap-4 mb-5">
               <div className="flex-1">
-                <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Update User</h3>
+                <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Edit User</h3>
               </div>
           </div>
 
@@ -275,7 +275,7 @@ export default function Page() {
 
 
         </div>
-        <div className="flex lg:items-center gap-1.5 mt-[24px]">
+        {/* <div className="flex lg:items-center gap-1.5 mt-[24px]">
             <Checkbox id="term6" size="sm" color="default" />
             <Label
               htmlFor="term6"
@@ -283,7 +283,7 @@ export default function Page() {
             >
             Send Login Credentials
             </Label>
-          </div>
+          </div> */}
                <div className=" mt-[36px] flex gap-4">
 
             <Button className="bg-[#5A5A5A]" type="submit">
@@ -293,7 +293,7 @@ export default function Page() {
                         <AlertDialogTrigger asChild>
                           <Button
                           >
-                            Add User
+                            Save Changes
                           </Button>
                         </AlertDialogTrigger>
                         <AlertDialogContent className="max-w-[800px]">
