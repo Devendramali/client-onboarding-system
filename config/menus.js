@@ -1000,6 +1000,11 @@ export const menusConfig = {
             icon: Graph,
           },
           {
+            title: "Billing Account Managemen",
+            href: "/billing-account-management",
+            icon: Graph,
+          },
+          {
             title: "Module Management",
             href: "/module-management",
             icon: Cart,
