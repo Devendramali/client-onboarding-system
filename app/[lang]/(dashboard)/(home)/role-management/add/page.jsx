@@ -212,9 +212,9 @@ export default function Page() {
               </div>
           </div>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}  className="flex flex-col gap-[16px]">
 
-        <div className="grid grid-cols-2 gap-4 ">
+        <div className="grid grid-cols-2 gap-[24px] border border-[#D9D9D9] border-[1px] rounded-[16px] p-[16px] ">
           
           <div className="col-span-2 flex flex-col gap-2 lg:flex-row lg:items-center">
 
@@ -225,9 +225,7 @@ export default function Page() {
             </Label>
 
           </div>
-
-
-          {/* ================================================= */}
+            {/* ================================================= */}
           {/* ROLE NAME */}
           {/* ================================================= */}
 
@@ -237,7 +235,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-              Role Name
+              Role Name <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -275,9 +273,9 @@ export default function Page() {
 
             <Label
               htmlFor="description"
-              className="lg:min-w-[160px] lg:pt-2"
+              className="lg:min-w-[160px] "
             >
-              Description
+              Description <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -292,10 +290,10 @@ export default function Page() {
               </InputGroupText> */}
 
 
-              <Textarea
+              <Input
                 id="description"
-                placeholder="Enter role description"
-                className=" py-[9px] text-xs bg-[#F5F5F5]"
+                placeholder="This role has all access and permissions "
+                className=" bg-[#F5F5F5]"
                 value={description}
                 onChange={(e) =>
                   setDescription(e.target.value)
@@ -305,6 +303,11 @@ export default function Page() {
             </InputGroup>
 
           </div>
+          </div>
+          <div className="grid grid-cols-2 gap-[24px] border border-[#D9D9D9] border-[1px] rounded-[16px] p-[16px] ">
+
+
+        
 
 
 
@@ -339,7 +342,7 @@ export default function Page() {
   return (
     <div
       key={module.id}
-      className="col-span-2 flex flex-col gap-3"
+      className="col-span-1 flex flex-col gap-3"
     >
       {/* MODULE NAME */}
       <Label
@@ -534,6 +537,15 @@ export default function Page() {
     </div>
   );
 })}
+   <div className="col-span-2 flex lg:items-center gap-1.5 ">
+              <Checkbox id="term6" size="sm" color="default" />
+              <Label
+                htmlFor="term6"
+                className="text-base text-muted-foreground font-normal"
+              >
+                Select all permissions
+              </Label>
+            </div>
 
 
 
@@ -541,7 +553,11 @@ export default function Page() {
           {/* SUBMIT */}
           {/* ================================================= */}
 
-          <div className="col-span-2 flex gap-3">
+          
+
+
+        </div>
+        <div className="col-span-2 flex gap-3 mt-[32px]">
 
             <Button className="bg-[#5A5A5A]" type="submit">
               Discard
@@ -550,43 +566,150 @@ export default function Page() {
                         <AlertDialogTrigger asChild>
                           <Button
                           >
-                            Submit
+                            Add Role
                           </Button>
                         </AlertDialogTrigger>
-                        <AlertDialogContent>
-                          <AlertDialogHeader>
-                            <h3 className="text-xl font-medium text-[#1b776f]  mb-[32px]">Confirm New Role </h3>
-                            <div>
-                              <div className="">
-                                <h4 className="text-[16px] text-[#757575]">Role Name:</h4>
-                                <h3 className="text-[#1E1E1E] text-[20px]">sacsacavadvdsv</h3>
-                              </div>
-                              <div className="mt-[24px]">
-                                <h4 className="text-[16px] text-[#757575]">Role Description:</h4>
-                                <h3 className="text-[#1E1E1E] text-[20px]">asvdavnj dsv sj bs dvbjd v sdv kaaev fwevdsvsdf</h3>
-                              </div>
-
-                              <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2>
-                               <div className="mt-[24px]">
-                                <h4 className="text-[16px] text-[#757575] mb-0">User Management Perimissions:</h4>
-                                <h3 className="text-[#1E1E1E] flex gap-4 text-[20px]">
-                                  <span>View</span>
-                                  <span>Add</span>
-                                  <span>Edit</span>
-                                  <span>Delete</span>
-                                  </h3>
-                              </div>
-                               <div className="mt-[20px]">
-                                <h4 className="text-[16px] text-[#757575] mb-0">Billing Management Perimissions:</h4>
-                                <h3 className="text-[#1E1E1E] flex gap-4 text-[20px]">
-                                  <span>View</span>
-                                  <span>Add</span>
-                                  <span>Edit</span>
-                                  <span>Delete</span>
-                                  </h3>
-                              </div>
-                            </div>
-                          </AlertDialogHeader>
+                        <AlertDialogContent className="max-w-[800px] h-full overflow-x-auto">
+                            <AlertDialogHeader >
+                                                               <div className="">
+                                                                  <div className="flex justify-between nx-items-center">
+                                               
+                                                                         <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Confirm New Role  </h3>
+                                                                         <AlertDialogCancel className="bg-transparent hover:bg-transparent">
+                                                                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                             <path d="M18 6L6 18M6 6L18 18" stroke="#383838" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                                           </svg>
+                                                                         </AlertDialogCancel>
+                                                                       </div>
+                                                               <div className="border border-[#D9D9D9] rounded-[16px] p-[16px]">
+                                                                 <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Basic Information</h4>
+                                                                 <div className="grid grid-cols-2 gap-[24px]">
+                                                                   <div className="col-span-1">
+                                                                     <h4 className="text-[16px] text-[#757575]">Role Name:</h4>
+                                                                     <h3 className="text-[#1E1E1E] text-[20px]">sd,nsdfk</h3>
+                                                                   </div>
+                                                                   <div className="col-span-1">
+                                                                     <h4 className="text-[16px] text-[#757575]">Role Description:</h4>
+                                                                     <h3 className="text-[#1E1E1E] text-[20px]">Lasvdavnj dsv sj bs dvbjd v sdvk aaevfwevdsvsdf</h3>
+                                                                   </div>
+                                                                
+                                                                  
+                                                                 </div>
+                                               
+                                                                 {/* <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2> */}
+                                               
+                                               
+                                                               </div>
+                                                               
+                                               
+                                                                
+                                                               <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
+                                                                 <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Permissions</h4>
+                                                                 <div className="grid grid-cols-2 gap-[24px]">
+                                                               
+                                                                    <div className="col-span-1">
+                                                                         <h4 className="text-[16px] text-[#757575] mb-[8px]">User Management</h4>
+                                                                         <div className="flex gap-2">
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Add</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Edit</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Delete</h3>
+                       
+                                                                         </div>
+                                                                     </div> 
+                                                                      <div className="col-span-1">
+                                                                         <h4 className="text-[16px] text-[#757575] mb-[8px]">Billing Management</h4>
+                                                                         <div className="flex gap-2">
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Add</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Edit</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Delete</h3>
+                       
+                                                                         </div>
+                                                                     </div> 
+                                                                      <div className="col-span-1">
+                                                                         <h4 className="text-[16px] text-[#757575] mb-[8px]">Client Management</h4>
+                                                                         <div className="flex gap-2">
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Add</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Edit</h3>
+                                                                        
+                                                                         </div>
+                                                                     </div> 
+                                                                      <div className="col-span-1">
+                                                                         <h4 className="text-[16px] text-[#757575] mb-[8px]">Project Management</h4>
+                                                                         <div className="flex gap-2">
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Add</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Edit</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Delete</h3>
+                       
+                                                                         </div>
+                                                                     </div>  
+                                                                      <div className="col-span-1">
+                                                                         <h4 className="text-[16px] text-[#757575] mb-[8px]">Service Category & Service Master</h4>
+                                                                         <div className="flex gap-2">
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Edit</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Delete</h3>
+                       
+                                                                         </div>
+                                                                     </div> 
+                                                                      <div className="col-span-1">
+                                                                         <h4 className="text-[16px] text-[#757575] mb-[8px]">Client Project Onboarding</h4>
+                                                                         <div className="flex gap-2">
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Add</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Edit</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Delete</h3>
+                       
+                                                                         </div>
+                                                                     </div> 
+                                                                      <div className="col-span-1">
+                                                                         <h4 className="text-[16px] text-[#757575] mb-[8px]">Client Confirmation</h4>
+                                                                         <div className="flex gap-2">
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Add</h3>
+                                                                        
+                                                                         </div>
+                                                                     </div> 
+                                                                      <div className="col-span-1">
+                                                                         <h4 className="text-[16px] text-[#757575] mb-[8px]">OTP Verification</h4>
+                                                                         <div className="flex gap-2">
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Add</h3>
+                                                                        
+                                                                         </div>
+                                                                     </div> 
+                                                                      <div className="col-span-1">
+                                                                         <h4 className="text-[16px] text-[#757575] mb-[8px]">Agreement Generation & Document Storage</h4>
+                                                                         <div className="flex gap-2">
+                                                                          <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Edit</h3>
+                                                                         <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Delete</h3>
+                       
+                                                                         </div>
+                                                                     </div> 
+                                                                      
+                                                                  
+                                                                 </div>
+                                               
+                                                                 {/* <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2> */}
+                                               
+                                               
+                                                               </div>
+                                                                  <div className="col-span-2 flex lg:items-center gap-1.5  mt-5">
+              <Checkbox id="term6" size="sm" color="default" />
+              <Label
+                htmlFor="term6"
+                className="text-base text-muted-foreground font-normal"
+              >
+                Select all permissions
+              </Label>
+            </div>
+                                                             
+                                                            
+                                                               </div>
+                                                             </AlertDialogHeader>
                           <AlertDialogFooter>
                             <AlertDialogCancel  className="bg-[#5A5A5A]">
                               Go back and Edit
@@ -599,9 +722,6 @@ export default function Page() {
                       </AlertDialog>
 
           </div>
-
-
-        </div>
 
       </form>
 

@@ -316,7 +316,7 @@ export default function Page() {
                               </div>
                               <div className="col-span-1">
                                 <h4 className="text-[16px] text-[#757575]">Role</h4>
-                                <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px]">Admin</h3>
+                                <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Admin</h3>
                               </div>
                               </div>
 

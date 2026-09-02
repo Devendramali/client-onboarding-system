@@ -16,7 +16,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 
 import { Label } from "@/components/ui/label";
-import { usersdata } from "@/app/[lang]/(dashboard)/(tables)/tailwindui-table/data";
+import { billingAccountsData } from "@/app/[lang]/(dashboard)/(tables)/tailwindui-table/data";
 import { Icon } from "@iconify/react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -56,29 +56,33 @@ const Userlist = () => {
           <TableHeader>
             <TableRow>
               <TableHead className="font-semibold">Sr No.</TableHead>
-              <TableHead className="font-semibold">Full Name</TableHead>
-              <TableHead className="font-semibold">Email Address</TableHead>
-              <TableHead className="font-semibold">Role</TableHead>
+              <TableHead className="font-semibold ">Company Name</TableHead>
+              <TableHead className="font-semibold">Billing Name</TableHead>
+              <TableHead className="font-semibold">GST No.</TableHead>
+              <TableHead className="font-semibold">Contact Name</TableHead>
+              <TableHead className="font-semibold">Contact Email</TableHead>
+              <TableHead className="font-semibold">Contact No.</TableHead>
               <TableHead className="font-semibold">Status</TableHead>
               <TableHead className="font-semibold text-left">Action</TableHead>
             </TableRow>
           </TableHeader>
 
           <TableBody>
-            {usersdata.map((item, index) => (
-              <TableRow key={item.email} className="hover:bg-muted">
+            {billingAccountsData.map((item, index) => (
+              <TableRow key={item.billingName} className="hover:bg-muted">
                 <TableCell>{index + 1}</TableCell>
-                <TableCell>{item.name}</TableCell>
+                <TableCell className=" ">{item.companyName}</TableCell>
 
-                <TableCell>{item.email}</TableCell>
+                <TableCell  className=" ">{item.billingName}</TableCell>
 
-                {/* <TableCell>{item.mobile}</TableCell> */}
+                <TableCell>{item.gstNo}</TableCell>
 
-                {/* <TableCell>{item.department}</TableCell> */}
+                <TableCell>{item.contactName}</TableCell>
 
-                {/* <TableCell>{item.designation}</TableCell> */}
+                <TableCell>{item.contactEmail}</TableCell>
+                <TableCell>{item.contactNo}</TableCell>
 
-                <TableCell>
+                {/* <TableCell>
                   <Badge
                     variant="soft"
                     color={
@@ -90,7 +94,7 @@ const Userlist = () => {
                   >
                     {item.role}
                   </Badge>
-                </TableCell>
+                </TableCell> */}
 
                 <TableCell>
                   <Switch
@@ -99,8 +103,8 @@ const Userlist = () => {
                   />
                 </TableCell>
 
-                <TableCell className="flex gap-3">
-
+                <TableCell >
+                  <div className="flex gap-3">
                   <a href="/billing-account-management/update" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer hover:text-primary-foreground hover:border-primary hover:bg-[#1b776f] h-7 w-7 bg-[#fff] border border-[#1A766D] text-[#1A766D]">
                     <Icon icon="heroicons:pencil" className="h-4 w-4 " />
                   </a>
@@ -296,6 +300,9 @@ const Userlist = () => {
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog >
+                  </div>
+
+
                 </TableCell>
               </TableRow>
             ))}

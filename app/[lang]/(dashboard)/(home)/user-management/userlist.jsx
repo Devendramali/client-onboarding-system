@@ -149,7 +149,7 @@ const Userlist = () => {
                             </div>
                             <div className="col-span-1">
                               <h4 className="text-[16px] text-[#757575]">Role</h4>
-                              <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px]">Admin</h3>
+                              <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] border border-[#1A766D] text-[16px]">Admin</h3>
                             </div>
                           </div>
 
@@ -157,7 +157,7 @@ const Userlist = () => {
 
 
                         </div>
-                        <div className="flex-1 flex  items-center gap-1.5 mt-[26px] mb-[20px]">
+                        {/* <div className="flex-1 flex  items-center gap-1.5 mt-[26px] mb-[20px]">
                           <Checkbox
                             size="sm"
                             className="border-default-300 mt-[1px]"
@@ -169,8 +169,17 @@ const Userlist = () => {
                           >
                             Send Login Credentials
                           </Label>
-                        </div>
+                        </div> */}
                       </AlertDialogHeader>
+                       <AlertDialogFooter>
+                                          
+                                            <AlertDialogAction className="bg-[#1A766D]">
+                                              Resend Login Credentials
+                                            </AlertDialogAction>
+                                            <AlertDialogAction className="bg-[#1A766D]">
+                                              Reset Password
+                                            </AlertDialogAction>
+                                          </AlertDialogFooter>
 
                     </AlertDialogContent>
                   </AlertDialog>
