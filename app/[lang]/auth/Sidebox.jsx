@@ -43,7 +43,7 @@ const Sidebox = () => {
                 </Button> */}
 
              
-                <div className="text-[64px] leading-[50px] 2xl:text-6xl 2xl:leading-[72px] font-[500] mt-2.5">
+                <div className="text-[64px] leading-[50px]  leading-[64px] font-[500] mt-2.5">
                   {/* <span </span> */}
                   <span className="text-[#fff]  ">All Clients, 
                     Managed in 
