@@ -30,7 +30,7 @@ const Sidebox = () => {
               alt="image"
               className="absolute bottom-0 left-0 z-2 w-full h-full object-contain object-bottom"
             />
-            <div className="relative z-10  bg-[rgba(30,30,30,0.24)] backdrop-blur-[8px]  py-14 px-16 2xl:py-[84px] 2xl:pl-[50px] 2xl:pr-[136px] rounded max-w-[640px]">
+            <div className="relative z-10  bg-[rgba(30,30,30,0.24)] backdrop-blur-[4px]  py-14 px-16 2xl:py-[84px] 2xl:pl-[50px] 2xl:pr-[136px] rounded max-w-[640px]">
               <div>
                 {/* <Button
                   className="bg-transparent hover:bg-transparent h-fit w-fit p-0"
