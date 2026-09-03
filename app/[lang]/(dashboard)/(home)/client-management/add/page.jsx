@@ -28,6 +28,7 @@ import {
 import { Icon } from "@iconify/react";
 import Card from "@/components/ui/card-snippet";
 import MultiSelect from "@/components/ui/MultiSelect";
+import CustomSelect from "@/components/ui/CustomSelect";
 import { Switch } from "@/components/ui/switch";
 
 // =====================================================
@@ -36,20 +37,20 @@ import { Switch } from "@/components/ui/switch";
 
 const roles = [
   {
-    label: "Role 1",
-    value: "role1",
+    label: "Account 1",
+    value: "Account1",
   },
   {
-    label: "Role 2",
-    value: "role2",
+    label: "Account 2",
+    value: "Account2",
   },
   {
-    label: "Role 3",
-    value: "role3",
+    label: "Account 3",
+    value: "Account3",
   },
   {
-    label: "Role 4",
-    value: "role4",
+    label: "Account 4",
+    value: "Account4",
   },
 ];
 
@@ -299,10 +300,10 @@ export default function Page() {
               htmlFor="role"
               className="lg:min-w-[160px]"
             >
-              Linked Billing Account <span className="text-[#EC221F]">*</span>
+              Linked Billing Accounts <span className="text-[#EC221F]">*</span>
             </Label>
 
-            <MultiSelect
+            <CustomSelect
               options={roles2}
               value={selectedRoles2}
               onChange={setSelectedRoles2}
@@ -577,7 +578,7 @@ export default function Page() {
                                 </div>
                                </div>  
                                <div className="lg:col-span-1 col-span-2">
-                                <h4 className="text-[16px] text-[#757575]">Linked Billing Account</h4>
+                                <h4 className="text-[16px] text-[#757575]">Linked Billing Accounts</h4>
                                 <div className="flex gap-3 mt-[8px]">
 
                                 <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Account1</h3>

@@ -28,6 +28,7 @@ import {
 import { Icon } from "@iconify/react";
 import Card from "@/components/ui/card-snippet";
 import MultiSelect from "@/components/ui/MultiSelect";
+import CustomSelect from "@/components/ui/CustomSelect";
 import { Switch } from "@/components/ui/switch";
 
 // =====================================================
@@ -35,21 +36,21 @@ import { Switch } from "@/components/ui/switch";
 // =====================================================
 
 const roles = [
-  {
-    label: "Role 1",
-    value: "role1",
+   {
+    label: "Account 1",
+    value: "Account1",
   },
   {
-    label: "Role 2",
-    value: "role2",
+    label: "Account 2",
+    value: "Account2",
   },
   {
-    label: "Role 3",
-    value: "role3",
+    label: "Account 3",
+    value: "Account3",
   },
   {
-    label: "Role 4",
-    value: "role4",
+    label: "Account 4",
+    value: "Account4",
   },
 ];
 
@@ -300,10 +301,10 @@ export default function Page() {
               htmlFor="role"
               className="lg:min-w-[160px]"
             >
-              Linked Billing Account <span className="text-[#EC221F]">*</span>
+              Linked Billing Accounts <span className="text-[#EC221F]">*</span>
             </Label>
 
-            <MultiSelect
+            <CustomSelect
               options={roles1}
               value={selectedRoles1}
               onChange={setSelectedRoles1}

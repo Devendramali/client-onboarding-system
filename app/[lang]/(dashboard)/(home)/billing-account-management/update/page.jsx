@@ -822,6 +822,21 @@ export default function Page() {
             </InputGroup>
 
           </div>
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
+                      <Label
+                        htmlFor="role"
+                        className="lg:min-w-[160px]"
+                      >
+                        Role <span className="text-[#EC221F]">*</span>
+                      </Label>
+                    
+                      <MultiSelect
+                        options={roles}
+                        value={selectedRoles}
+                        onChange={setSelectedRoles}
+                        placeholder="Select..."
+                      />
+                    </div>
 
                   </div>
 

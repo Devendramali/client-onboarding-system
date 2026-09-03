@@ -81,7 +81,7 @@ const Userlist = () => {
               <TableHead className="font-semibold">
                  <div className="max-w-[500px] truncate  ">
                   
-                Linked Billing Account's
+                Linked Billing Accounts
                  </div>
               </TableHead>
 
@@ -250,7 +250,7 @@ const Userlist = () => {
                                                           </div>
                                                          </div>  
                                                          <div className="lg:col-span-1 col-span-2">
-                                                          <h4 className="text-[16px] text-[#757575]">Linked Billing Account</h4>
+                                                          <h4 className="text-[16px] text-[#757575]">Linked Billing Accounts</h4>
                                                           <div className="flex gap-3 mt-[8px]">
                           
                                                           <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Account1</h3>
