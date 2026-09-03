@@ -150,7 +150,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -186,7 +186,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -219,7 +219,7 @@ export default function Page() {
 
 
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -249,7 +249,7 @@ export default function Page() {
             </InputGroup>
 
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -280,7 +280,7 @@ export default function Page() {
 
           </div>
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -295,7 +295,7 @@ export default function Page() {
               // placeholder="Select..."
             />
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -357,7 +357,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -393,7 +393,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -423,7 +423,7 @@ export default function Page() {
             </InputGroup>
 
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -433,7 +433,7 @@ export default function Page() {
 
             <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -443,7 +443,7 @@ export default function Page() {
 
             <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -456,7 +456,7 @@ export default function Page() {
 
 
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"

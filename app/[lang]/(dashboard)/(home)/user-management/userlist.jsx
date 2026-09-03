@@ -135,19 +135,19 @@ const Userlist = () => {
                         <div className="border border-[#D9D9D9] rounded-[16px] p-[16px]">
                           <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Basic Information</h4>
                           <div className="grid grid-cols-2 gap-[24px]">
-                            <div className="col-span-1">
+                            <div className="lg:col-span-1 col-span-2 col-span-2">
                               <h4 className="text-[16px] text-[#757575]">Full Name:</h4>
                               <h3 className="text-[#1E1E1E] text-[20px]">jhone doe</h3>
                             </div>
-                            <div className="col-span-1">
+                            <div className="lg:col-span-1 col-span-2 col-span-2">
                               <h4 className="text-[16px] text-[#757575]">Email Address:</h4>
                               <h3 className="text-[#1E1E1E] text-[20px]">abc@gmail.com</h3>
                             </div>
-                            <div className="col-span-1">
+                            <div className="lg:col-span-1 col-span-2 col-span-2">
                               <h4 className="text-[16px] text-[#757575]">Phone Number:</h4>
                               <h3 className="text-[#1E1E1E] text-[20px]">8945761230</h3>
                             </div>
-                            <div className="col-span-1">
+                            <div className="lg:col-span-1 col-span-2 col-span-2">
                               <h4 className="text-[16px] text-[#757575]">Role</h4>
                               <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] border border-[#1A766D] text-[16px]">Admin</h3>
                             </div>

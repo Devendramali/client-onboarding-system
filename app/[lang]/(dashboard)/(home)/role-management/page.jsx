@@ -133,11 +133,11 @@ export default function Page() {
                                         <div className="border border-[#D9D9D9] rounded-[16px] p-[16px]">
                                           <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Basic Information</h4>
                                           <div className="grid grid-cols-2 gap-[24px]">
-                                            <div className="col-span-1">
+                                            <div className="lg:col-span-1 col-span-2">
                                               <h4 className="text-[16px] text-[#757575]">Role Name:</h4>
                                               <h3 className="text-[#1E1E1E] text-[20px]">sd,nsdfk</h3>
                                             </div>
-                                            <div className="col-span-1">
+                                            <div className="lg:col-span-1 col-span-2">
                                               <h4 className="text-[16px] text-[#757575]">Role Description:</h4>
                                               <h3 className="text-[#1E1E1E] text-[20px]">Lasvdavnj dsv sj bs dvbjd v sdvk aaevfwevdsvsdf</h3>
                                             </div>
@@ -156,7 +156,7 @@ export default function Page() {
                                           <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Permissions </h4>
                                           <div className="grid grid-cols-2 gap-[24px]">
                                         
-                                             <div className="col-span-1">
+                                             <div className="lg:col-span-1 col-span-2">
                                                   <h4 className="text-[16px] text-[#757575] mb-[8px]">User Management</h4>
                                                   <div className="flex gap-2">
                                                   <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
@@ -166,7 +166,7 @@ export default function Page() {
 
                                                   </div>
                                               </div> 
-                                               <div className="col-span-1">
+                                               <div className="lg:col-span-1 col-span-2">
                                                   <h4 className="text-[16px] text-[#757575] mb-[8px]">Billing Management</h4>
                                                   <div className="flex gap-2">
                                                   <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
@@ -176,7 +176,7 @@ export default function Page() {
 
                                                   </div>
                                               </div> 
-                                               <div className="col-span-1">
+                                               <div className="lg:col-span-1 col-span-2">
                                                   <h4 className="text-[16px] text-[#757575] mb-[8px]">Client Management</h4>
                                                   <div className="flex gap-2">
                                                   <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
@@ -185,7 +185,7 @@ export default function Page() {
                                                  
                                                   </div>
                                               </div> 
-                                               <div className="col-span-1">
+                                               <div className="lg:col-span-1 col-span-2">
                                                   <h4 className="text-[16px] text-[#757575] mb-[8px]">Project Management</h4>
                                                   <div className="flex gap-2">
                                                   <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
@@ -195,7 +195,7 @@ export default function Page() {
 
                                                   </div>
                                               </div>  
-                                               <div className="col-span-1">
+                                               <div className="lg:col-span-1 col-span-2">
                                                   <h4 className="text-[16px] text-[#757575] mb-[8px]">Service Category & Service Master</h4>
                                                   <div className="flex gap-2">
                                                   <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
@@ -204,7 +204,7 @@ export default function Page() {
 
                                                   </div>
                                               </div> 
-                                               <div className="col-span-1">
+                                               <div className="lg:col-span-1 col-span-2">
                                                   <h4 className="text-[16px] text-[#757575] mb-[8px]">Client Project Onboarding</h4>
                                                   <div className="flex gap-2">
                                                   <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
@@ -214,7 +214,7 @@ export default function Page() {
 
                                                   </div>
                                               </div> 
-                                               <div className="col-span-1">
+                                               <div className="lg:col-span-1 col-span-2">
                                                   <h4 className="text-[16px] text-[#757575] mb-[8px]">Client Confirmation</h4>
                                                   <div className="flex gap-2">
                                                   <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
@@ -222,7 +222,7 @@ export default function Page() {
                                                  
                                                   </div>
                                               </div> 
-                                               <div className="col-span-1">
+                                               <div className="lg:col-span-1 col-span-2">
                                                   <h4 className="text-[16px] text-[#757575] mb-[8px]">OTP Verification</h4>
                                                   <div className="flex gap-2">
                                                   <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">View</h3>
@@ -230,7 +230,7 @@ export default function Page() {
                                                  
                                                   </div>
                                               </div> 
-                                               <div className="col-span-1">
+                                               <div className="lg:col-span-1 col-span-2">
                                                   <h4 className="text-[16px] text-[#757575] mb-[8px]">Agreement Generation & Document Storage</h4>
                                                   <div className="flex gap-2">
                                                    <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px] border border-[#1A766D]">Edit</h3>
@@ -246,7 +246,7 @@ export default function Page() {
                         
                         
                                         </div>
-                                              <div className="col-span-2 flex lg:items-center gap-1.5  mt-5">
+                                              <div className="col-span-2 flex items-center gap-1.5  mt-5">
               <Checkbox id="term6" size="sm" color="default" />
               <Label
                 htmlFor="term6"

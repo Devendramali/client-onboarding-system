@@ -6,6 +6,7 @@ import { Search } from "lucide-react";
 import { SiteLogo } from "@/components/svg";
 import Link from "next/link";
 import { useMediaQuery } from "@/hooks/use-media-query";
+import Image from "next/image";
 
 const MenuBar = ({ collapsed, setCollapsed }) => {
   return (
@@ -65,7 +66,13 @@ const VerticalHeader = ({ handleOpenSearch }) => {
 
   const MainLogo = (
     <Link href="/dashboard" className=" text-primary ">
-      <SiteLogo className="h-7 w-7" />
+      {/* <SiteLogo className="h-7 w-7" /> */}
+      <Image
+                src="/images/all-img/fevicon.svg"
+                alt="DigiHost Logo"
+                width={56}
+                height={56}
+              />
     </Link>
   );
   const SearchButton = (

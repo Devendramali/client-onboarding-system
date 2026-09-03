@@ -130,7 +130,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -166,7 +166,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -199,7 +199,7 @@ export default function Page() {
 
 
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -229,7 +229,7 @@ export default function Page() {
             </InputGroup>
 
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -260,7 +260,7 @@ export default function Page() {
 
           </div>
 
-          {/* <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          {/* <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -322,7 +322,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -358,7 +358,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -388,7 +388,7 @@ export default function Page() {
             </InputGroup>
 
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -398,7 +398,7 @@ export default function Page() {
 
             <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select State" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -408,7 +408,7 @@ export default function Page() {
 
             <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select State" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -421,7 +421,7 @@ export default function Page() {
 
 
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -509,7 +509,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -545,7 +545,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -575,7 +575,7 @@ export default function Page() {
             </InputGroup>
 
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -585,7 +585,7 @@ export default function Page() {
 
             <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select State" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -595,7 +595,7 @@ export default function Page() {
 
             <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select State" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
           </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -608,7 +608,7 @@ export default function Page() {
 
 
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -683,7 +683,7 @@ export default function Page() {
 
           </div>
           <AlertDialog>
-            <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+            <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
               <Label
                 htmlFor="role"
@@ -731,7 +731,7 @@ export default function Page() {
 
                   <div className="grid grid-cols-1 gap-[24px]">
 
-                    <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+                    <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
               <Label
               htmlFor="roleName"
@@ -762,7 +762,7 @@ export default function Page() {
 
           </div>
 
-                   <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+                   <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -792,7 +792,7 @@ export default function Page() {
             </InputGroup>
 
           </div>
-                  <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+                  <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -822,7 +822,7 @@ export default function Page() {
             </InputGroup>
 
           </div>
-                 <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+                 <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -901,19 +901,19 @@ export default function Page() {
                 <div className="border border-[#D9D9D9] rounded-[16px] p-[16px]">
                   <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Company Information</h4>
                   <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Company name:</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">BrightWave Solutions</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Billing name:</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">Luna Harper</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">GST Number:</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">GSTIN 29ABCDE1234F2Z5</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">PAN Number:</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">GSTIN 29ABCDE1234F2Z5</h3>
                     </div>
@@ -927,27 +927,27 @@ export default function Page() {
                 <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
                   <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Registered Address</h4>
                   <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Address Line 1</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">Building no1 Efafaf</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Address Line 2</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">TOwn asnadw</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">City</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">Mumbai</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">State</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">Maharashtra</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Country</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">India</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Zipcode</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">450852</h3>
                     </div>
@@ -961,27 +961,27 @@ export default function Page() {
                 <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
                   <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Billing Address</h4>
                   <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Address Line 1</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">Building no1 Efafaf</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Address Line 2</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">TOwn asnadw</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">City</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">Mumbai</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">State</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">Maharashtra</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Country</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">India</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Zipcode</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">450852</h3>
                     </div>
@@ -995,19 +995,19 @@ export default function Page() {
                 <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
                   <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Contact</h4>
                   <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Contact Name:</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">jhone doe</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Contact Email Address:</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">abc@gmail.com</h3>
                     </div>
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <h4 className="text-[16px] text-[#757575]">Contact Phone Number:</h4>
                       <h3 className="text-[#1E1E1E] text-[20px]">Mumbai</h3>
                     </div>
-                     <div className="col-span-1">
+                     <div className="lg:col-span-1 col-span-2">
                                 <h4 className="text-[16px] text-[#757575]">Role</h4>
                                 <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px]">Admin</h3>
                               </div>  
@@ -1021,7 +1021,7 @@ export default function Page() {
                 <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
                   <h4 className="text-[16px] text-[#1E1E1E] font-[500] mb-[24px]">Account Status</h4>
                   <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
+                    <div className="lg:col-span-1 col-span-2">
                       <Switch size="lg" id="s2" />
                     </div>
                  

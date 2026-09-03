@@ -229,7 +229,7 @@ export default function Page() {
           {/* ROLE NAME */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-left">
 
             <Label
               htmlFor="roleName"
@@ -269,7 +269,7 @@ export default function Page() {
           {/* DESCRIPTION */}
           {/* ================================================= */}
 
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-start">
+          <div className="lg:col-span-1 col-span-2 flex flex-col gap-2 lg:flex-col lg:items-start">
 
             <Label
               htmlFor="description"
@@ -342,7 +342,7 @@ export default function Page() {
   return (
     <div
       key={module.id}
-      className="col-span-1 flex flex-col gap-3"
+      className="lg:col-span-1 col-span-2 flex flex-col gap-3"
     >
       {/* MODULE NAME */}
       <Label
@@ -537,7 +537,7 @@ export default function Page() {
     </div>
   );
 })}
-   <div className="col-span-2 flex lg:items-center gap-1.5 ">
+   <div className="col-span-2 flex items-center gap-1.5 ">
               <Checkbox id="term6" size="sm" color="default" />
               <Label
                 htmlFor="term6"
