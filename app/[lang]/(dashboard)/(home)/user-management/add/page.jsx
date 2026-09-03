@@ -296,7 +296,7 @@ export default function Page() {
                             Add User
                           </Button>
                         </AlertDialogTrigger>
-                        <AlertDialogContent className="max-w-[800px]">
+                        <AlertDialogContent className="max-w-[800px] max-h-[90vh] overflow-y-auto">
                           <AlertDialogHeader>
                             <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Confirm New User </h3>
                             <div className="border border-[#D9D9D9] rounded-[16px] p-[16px]">

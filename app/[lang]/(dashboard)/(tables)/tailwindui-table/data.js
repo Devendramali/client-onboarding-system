@@ -169,6 +169,58 @@ export const usersdata = [
   },
 ];
 
+export const clientsData = [
+  {
+    id: 1,
+    clientName: "Rajesh Industries Pvt. Ltd.",
+    emailAddress: "rajesh@rajeshind.com",
+    mobileNumber: "+91 9876543210",
+    designation: "Managing Director",
+    linkedBillingAccounts: ["ACC-1001", "ACC-1002"],
+    roleType: "Owner",
+    status: true,
+  },
+  {
+    id: 2,
+    clientName: "Sharma Enterprises",
+    emailAddress: "amit.sharma@sharmaenterprises.com",
+    mobileNumber: "+91 9823456789",
+    designation: "Finance Manager",
+    linkedBillingAccounts: ["ACC-1003"],
+    roleType: "Authorized Signatory",
+    status: true,
+  },
+  {
+    id: 3,
+    clientName: "Global Tech Solutions",
+    emailAddress: "priya@globaltech.com",
+    mobileNumber: "+91 9765432109",
+    designation: "Director",
+    linkedBillingAccounts: ["ACC-1004", "ACC-1005"],
+    roleType: "Representative",
+    status: false,
+  },
+  {
+    id: 4,
+    clientName: "Patil Construction",
+    emailAddress: "sachin.patil@patilconstruction.com",
+    mobileNumber: "+91 9898989898",
+    designation: "Business Owner",
+    linkedBillingAccounts: ["ACC-1006"],
+    roleType: "Owner",
+    status: true,
+  },
+  {
+    id: 5,
+    clientName: "Maharashtra Auto Parts",
+    emailAddress: "neha@mahaauto.com",
+    mobileNumber: "+91 9812345678",
+    designation: "Operations Manager",
+    linkedBillingAccounts: ["ACC-1007", "ACC-1008"],
+    roleType: "Authorized Signatory",
+    status: true,
+  },
+];
 
 export const billingAccountsData = [
   {

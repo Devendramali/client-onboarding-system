@@ -1009,16 +1009,16 @@ export const menusConfig = {
             href: "/client-management",
             icon: Graph,
           },
-          {
-            title: "Module Management",
-            href: "/module-management",
-            icon: Cart,
-          },
-          {
-            title: "project ",
-            href: "/project",
-            icon: ClipBoard,
-          },
+          // {
+          //   title: "Module Management",
+          //   href: "/module-management",
+          //   icon: Cart,
+          // },
+          // {
+          //   title: "project ",
+          //   href: "/project",
+          //   icon: ClipBoard,
+          // },
         ],
       },
       {

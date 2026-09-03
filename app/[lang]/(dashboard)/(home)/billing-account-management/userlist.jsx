@@ -42,7 +42,7 @@ const Userlist = () => {
       ]}>
         <div className="flex flex-wrap items-center gap-4 mb-5">
           <div className="flex-1">
-            <h3 className="text-xl font-medium text-[#1b776f] mb-2">Billing Account Management</h3>
+            <h3 className="text-3xl font-medium text-[#1b776f] mb-0">Billing Account Management</h3>
           </div>
           <div className="flex-none">
             <a href="/billing-account-management/add" class="inline-flex items-center justify-center rounded-md text-[16px] font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" ><svg className="me-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -55,7 +55,12 @@ const Userlist = () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="font-semibold">Sr No.</TableHead>
+              <TableHead className="font-semibold">
+                  <div className="max-w-[500px] truncate  ">
+
+                Sr No.
+                  </div>
+                </TableHead>
               <TableHead className="font-semibold ">Company Name</TableHead>
               <TableHead className="font-semibold">Billing Name</TableHead>
               <TableHead className="font-semibold">GST No.</TableHead>
@@ -71,16 +76,18 @@ const Userlist = () => {
             {billingAccountsData.map((item, index) => (
               <TableRow key={item.billingName} className="hover:bg-muted">
                 <TableCell>{index + 1}</TableCell>
-                <TableCell className=" ">{item.companyName}</TableCell>
+                <TableCell className=" ">
+                    <div className="max-w-[500px] truncate  ">{item.companyName}</div></TableCell>
 
-                <TableCell  className=" ">{item.billingName}</TableCell>
+                <TableCell  className=" ">  <div className="max-w-[500px] truncate  ">{item.billingName}</div></TableCell>
 
-                <TableCell>{item.gstNo}</TableCell>
+                <TableCell>  <div className="max-w-[500px] truncate  ">{item.gstNo}</div></TableCell>
 
-                <TableCell>{item.contactName}</TableCell>
+                <TableCell>  <div className="max-w-[500px] truncate  ">
+                  {item.contactName}</div></TableCell>
 
-                <TableCell>{item.contactEmail}</TableCell>
-                <TableCell>{item.contactNo}</TableCell>
+                <TableCell>  <div className="max-w-[500px] truncate  ">{item.contactEmail}</div></TableCell>
+                <TableCell>  <div className="max-w-[500px] truncate  ">{item.contactNo}</div></TableCell>
 
                 {/* <TableCell>
                   <Badge
@@ -122,7 +129,7 @@ const Userlist = () => {
                         <Icon icon="heroicons:eye" className="h-4 w-4" />
                       </Button>
                     </AlertDialogTrigger>
-                    <AlertDialogContent className="max-w-[800px] h-full overflow-x-auto">
+                    <AlertDialogContent className="max-w-[800px] max-h-[90vh] overflow-y-auto">
               <AlertDialogHeader>
                 <div className="">
                    <div className="flex justify-between nx-items-center">

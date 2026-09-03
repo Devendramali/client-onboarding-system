@@ -569,7 +569,7 @@ export default function Page() {
                             Add Role
                           </Button>
                         </AlertDialogTrigger>
-                        <AlertDialogContent className="max-w-[800px] h-full overflow-x-auto">
+                        <AlertDialogContent className="max-w-[800px] max-h-[90vh] overflow-y-auto">
                             <AlertDialogHeader >
                                                                <div className="">
                                                                   <div className="flex justify-between nx-items-center">

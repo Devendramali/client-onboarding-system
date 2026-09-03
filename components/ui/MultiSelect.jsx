@@ -32,14 +32,20 @@ const MultiSelect = ({
     };
   }, []);
 
+  // Select only ONE option
   const handleSelect = (option) => {
     const alreadySelected = value.includes(option.value);
 
     if (alreadySelected) {
-      onChange(value.filter((item) => item !== option.value));
+      // Unselect
+      onChange([]);
     } else {
-      onChange([...value, option.value]);
+      // Replace previous selection with new selection
+      onChange([option.value]);
     }
+
+    // Close dropdown after selection
+    setOpen(false);
   };
 
   const removeItem = (item, e) => {
@@ -57,7 +63,7 @@ const MultiSelect = ({
           open ? "ring-1 ring-[#D9D9D9]" : ""
         }`}
       >
-        {/* Selected Items */}
+        {/* Selected Item */}
         <div className="flex flex-1 flex-wrap items-center gap-[6px]">
           {value.length === 0 ? (
             <span className="text-[14px] text-[#666]">
@@ -124,12 +130,13 @@ const MultiSelect = ({
               </div>
             );
           })}
-           {/* Add New Button */}
-    {showAddButton && addButton && (
-      <div className="border-t border-[#E5E5E5]">
-        {addButton}
-      </div>
-    )}
+
+          {/* Add New Button */}
+          {showAddButton && addButton && (
+            <div className="border-t border-[#E5E5E5]">
+              {addButton}
+            </div>
+          )}
         </div>
       )}
     </div>

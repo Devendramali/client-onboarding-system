@@ -3,7 +3,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const Table = React.forwardRef(({ className, wrapperClass, ...props }, ref) => (
-  <div className={cn("overflow-x-auto bg-[#ECECEC] py-[10px] px-[25px] rounded-[24px]", wrapperClass)}>
+  <div className={cn("overflow-x-auto  border border-[1px] border-[#dedede] py-[8px] px-[8px] rounded-[24px]", wrapperClass)}>
     <table
       ref={ref}
       className={cn("w-full caption-top text-sm  ", className)}

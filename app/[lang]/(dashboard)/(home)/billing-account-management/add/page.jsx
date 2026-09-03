@@ -36,20 +36,20 @@ import { Switch } from "@/components/ui/switch";
 
 const roles = [
   {
-    label: "Role 1",
-    value: "role1",
+    label: "Person 1",
+    value: "Person1",
   },
   {
-    label: "Role 2",
-    value: "role2",
+    label: "Person 2",
+    value: "Person2",
   },
   {
-    label: "Role 3",
-    value: "role3",
+    label: "Person 3",
+    value: "Person3",
   },
   {
-    label: "Role 4",
-    value: "role4",
+    label: "Person 4",
+    value: "Person4",
   },
 ];
 
@@ -104,7 +104,7 @@ export default function Page() {
     <Card breadcrumbdata={[
       { title: "Dashboard", link: "/" },
       { title: "Billing Account Management", link: "/billing-account-management" },
-      { title: "Add billing account", link: "/billing-account-management/add" },
+      { title: "Add billing account", link: "" },
     ]}>
       <div className="flex flex-wrap items-center gap-4 mb-5">
         <div className="flex-1">
@@ -894,12 +894,12 @@ export default function Page() {
                 Add Billing Account
               </Button>
             </AlertDialogTrigger>
-            <AlertDialogContent className="max-w-[800px] h-full overflow-x-auto">
+            <AlertDialogContent className="max-w-[800px] max-h-[90vh] overflow-y-auto">
               <AlertDialogHeader>
                 <div className="">
-                 <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Confirm New User </h3>
+                 <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Confirm Billing Account</h3>
                 <div className="border border-[#D9D9D9] rounded-[16px] p-[16px]">
-                  <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Billing Account</h4>
+                  <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Company Information</h4>
                   <div className="grid grid-cols-2 gap-[24px]">
                     <div className="col-span-1">
                       <h4 className="text-[16px] text-[#757575]">Company name:</h4>

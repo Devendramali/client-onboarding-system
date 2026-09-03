@@ -36,20 +36,20 @@ import { Switch } from "@/components/ui/switch";
 
 const roles = [
   {
-    label: "Role 1",
-    value: "role1",
+    label: "Person 1",
+    value: "Person1",
   },
   {
-    label: "Role 2",
-    value: "role2",
+    label: "Person 2",
+    value: "Person2",
   },
   {
-    label: "Role 3",
-    value: "role3",
+    label: "Person 3",
+    value: "Person3",
   },
   {
-    label: "Role 4",
-    value: "role4",
+    label: "Person 4",
+    value: "Person4",
   },
 ];
 
@@ -104,11 +104,11 @@ export default function Page() {
     <Card breadcrumbdata={[
       { title: "Dashboard", link: "/" },
       { title: "Billing Account Management", link: "/billing-account-management" },
-      { title: "Edit billing account", link: "/billing-account-management/add" },
+      { title: "Edit billing account", link: "" },
     ]}>
       <div className="flex flex-wrap items-center gap-4 mb-5">
         <div className="flex-1">
-          <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Edit new billing account</h3>
+          <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Edit billing account</h3>
         </div>
       </div>
 
@@ -872,164 +872,11 @@ export default function Page() {
           <Button className="bg-[#5A5A5A]" type="submit">
             Discard
           </Button>
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
               <Button
               >
                 Add Billing Account
               </Button>
-            </AlertDialogTrigger>
-            <AlertDialogContent className="max-w-[800px] h-full overflow-x-auto">
-              <AlertDialogHeader>
-                <div className="">
-                 <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Confirm New User </h3>
-                <div className="border border-[#D9D9D9] rounded-[16px] p-[16px]">
-                  <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Billing Account</h4>
-                  <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Company name:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">BrightWave Solutions</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Billing name:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Luna Harper</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">GST Number:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">GSTIN 29ABCDE1234F2Z5</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">PAN Number:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">GSTIN 29ABCDE1234F2Z5</h3>
-                    </div>
-                   
-                  </div>
-
-                  {/* <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2> */}
-
-
-                </div>
-                <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
-                  <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Registered Address</h4>
-                  <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Address Line 1</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Building no1 Efafaf</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Address Line 2</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">TOwn asnadw</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">City</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Mumbai</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">State</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Maharashtra</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Country</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">India</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Zipcode</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">450852</h3>
-                    </div>
-                   
-                  </div>
-
-                  {/* <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2> */}
-
-
-                </div>
-                <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
-                  <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Billing Address</h4>
-                  <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Address Line 1</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Building no1 Efafaf</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Address Line 2</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">TOwn asnadw</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">City</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Mumbai</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">State</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Maharashtra</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Country</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">India</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Zipcode</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">450852</h3>
-                    </div>
-                   
-                  </div>
-
-                  {/* <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2> */}
-
-
-                </div>
-                <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
-                  <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Contact</h4>
-                  <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Contact Name:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">jhone doe</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Contact Email Address:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">abc@gmail.com</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Contact Phone Number:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Mumbai</h3>
-                    </div>
-                     <div className="col-span-1">
-                                <h4 className="text-[16px] text-[#757575]">Role</h4>
-                                <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px]">Admin</h3>
-                              </div>  
-                   
-                  </div>
-
-                  {/* <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2> */}
-
-
-                </div>
-                <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
-                  <h4 className="text-[16px] text-[#1E1E1E] font-[500] mb-[24px]">Account Status</h4>
-                  <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
-                      <Switch size="lg" id="s2" />
-                    </div>
-                 
-                   
-                  </div>
-
-                
-
-
-                </div>
-             
-                </div>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel className="bg-[#5A5A5A]">
-                  Go back and Edit
-                </AlertDialogCancel>
-                <a href="/billing-account-managemen" className="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px] bg-[#1A766D]">
-                  Confirm and Add Account
-                </a>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          
 
         </div>
 

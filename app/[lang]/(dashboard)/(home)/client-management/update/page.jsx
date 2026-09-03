@@ -53,6 +53,25 @@ const roles = [
   },
 ];
 
+const roles1 = [
+  {
+    label: "Role 1",
+    value: "role1",
+  },
+  {
+    label: "Role 2",
+    value: "role2",
+  },
+  {
+    label: "Role 3",
+    value: "role3",
+  },
+  {
+    label: "Role 4",
+    value: "role4",
+  },
+];
+
 
 
 
@@ -62,6 +81,7 @@ const roles = [
 
 export default function Page() {
   const [selectedRoles, setSelectedRoles] = useState([]);
+  const [selectedRoles1, setSelectedRoles1] = useState([]);
 
 
 
@@ -103,12 +123,12 @@ export default function Page() {
 
     <Card breadcrumbdata={[
       { title: "Dashboard", link: "/" },
-      { title: "Billing Account Management", link: "/billing-account-management" },
-      { title: "Add billing account", link: "/billing-account-management/add" },
-    ]}>
+      { title: "Client Management", link: "/client-management" },
+      { title: "Edit Client", link: "" },
+    ]}> 
       <div className="flex flex-wrap items-center gap-4 mb-5">
         <div className="flex-1">
-          <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Add new billing account</h3>
+          <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Edit Client</h3>
         </div>
       </div>
 
@@ -120,7 +140,7 @@ export default function Page() {
             <Label
               className="lg:min-w-[160px] text-[20px] text-[#1b776f]"
             >
-              Company Information
+             Basic Information
             </Label>
 
           </div>
@@ -136,7 +156,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-              Company Name <span className="text-[#EC221F]">*</span>
+              Full Name <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -151,7 +171,7 @@ export default function Page() {
 
               <Input
                 type="text"
-                // placeholder="Enter Full Name"
+                placeholder="Enter Full Name"
                 id="roleName"
                 className="bg-[#F5F5F5]"
 
@@ -172,7 +192,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-              Billing Name <span className="text-[#EC221F]">*</span>
+             Email Address <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -187,7 +207,7 @@ export default function Page() {
 
               <Input
                 type="text"
-                // placeholder="Enter Email Address"
+                placeholder="Enter Email Address"
                 id="roleName"
                 className="bg-[#F5F5F5]"
 
@@ -205,7 +225,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-              GST Number
+             Phone Number <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -220,7 +240,7 @@ export default function Page() {
 
               <Input
                 type="text"
-                // placeholder="Enter Mobile Number"
+                placeholder="Enter Mobile Number"
                 id="roleName"
                 className="bg-[#F5F5F5]"
 
@@ -235,7 +255,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-              PAN Number
+              Designation <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -250,7 +270,7 @@ export default function Page() {
 
               <Input
                 type="text"
-                // placeholder="Enter Mobile Number"
+                placeholder="Enter Designation"
                 id="roleName"
                 className="bg-[#F5F5F5]"
 
@@ -260,7 +280,7 @@ export default function Page() {
 
           </div>
 
-          {/* <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -274,7 +294,22 @@ export default function Page() {
               onChange={setSelectedRoles}
               // placeholder="Select..."
             />
-          </div> */}
+          </div>
+          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+            <Label
+              htmlFor="role"
+              className="lg:min-w-[160px]"
+            >
+              Linked Billing Account <span className="text-[#EC221F]">*</span>
+            </Label>
+
+            <MultiSelect
+              options={roles1}
+              value={selectedRoles1}
+              onChange={setSelectedRoles1}
+              // placeholder="Select..."
+            />
+          </div>
 
 
 
@@ -396,7 +431,7 @@ export default function Page() {
               City <span className="text-[#EC221F]">*</span>
             </Label>
 
-            <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select State" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
+            <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
           </div>
           <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
@@ -406,7 +441,7 @@ export default function Page() {
               State <span className="text-[#EC221F]">*</span>
             </Label>
 
-            <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select State" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
+            <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
           </div>
           <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
@@ -484,375 +519,7 @@ export default function Page() {
 
 
         </div>
-        <div className="grid grid-cols-2 gap-[24px] border border-[#D9D9D9] border-[1px] rounded-[16px] p-[16px]">
-          <div className="col-span-2 flex flex-col gap-4 lg:flex-row justify-between lg:items-center">
-
-            <Label
-              className="lg:min-w-[160px] text-[20px] text-[#1b776f]"
-            >
-              Billing Address
-            </Label>
-            <div className="flex lg:items-center gap-1.5 ">
-              <Checkbox id="term6" size="sm" color="default" />
-              <Label
-                htmlFor="term6"
-                className="text-base text-muted-foreground font-normal"
-              >
-                Same as Registered Address
-              </Label>
-            </div>
-
-          </div>
-
-
-          {/* ================================================= */}
-          {/* ROLE NAME */}
-          {/* ================================================= */}
-
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
-
-            <Label
-              htmlFor="roleName"
-              className="lg:min-w-[160px]"
-            >
-              Address Line 1 <span className="text-[#EC221F]">*</span>
-            </Label>
-
-
-            <InputGroup merged>
-
-              {/* <InputGroupText>
-
-                <Icon icon="mdi:user" />
-
-              </InputGroupText> */}
-
-
-              <Input
-                type="text"
-                // placeholder="Enter Full Name"
-                id="roleName"
-                className="bg-[#F5F5F5]"
-
-              />
-
-            </InputGroup>
-
-          </div>
-
-
-          {/* ================================================= */}
-          {/* ROLE NAME */}
-          {/* ================================================= */}
-
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
-
-            <Label
-              htmlFor="roleName"
-              className="lg:min-w-[160px]"
-            >
-              Address Line 2
-            </Label>
-
-
-            <InputGroup merged>
-
-              {/* <InputGroupText>
-
-                <Icon icon="mdi:email" />
-
-              </InputGroupText> */}
-
-
-              <Input
-                type="text"
-                // placeholder="Enter Email Address"
-                id="roleName"
-                className="bg-[#F5F5F5]"
-
-              />
-
-            </InputGroup>
-
-          </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
-            <Label
-              htmlFor="role"
-              className="lg:min-w-[160px]"
-            >
-              City <span className="text-[#EC221F]">*</span>
-            </Label>
-
-            <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select State" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
-          </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
-            <Label
-              htmlFor="role"
-              className="lg:min-w-[160px]"
-            >
-              State <span className="text-[#EC221F]">*</span>
-            </Label>
-
-            <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select State" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
-          </div>
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
-            <Label
-              htmlFor="role"
-              className="lg:min-w-[160px]"
-            >
-              Country <span className="text-[#EC221F]">*</span>
-            </Label>
-
-            <Select className=""> <SelectTrigger className="!bg-[#F5F5F5]"> <SelectValue placeholder="Select State" /> </SelectTrigger> <SelectContent className=""> <SelectItem value="alberta">Alberta</SelectItem> <SelectItem value="british">British Columbia</SelectItem> <SelectItem value="manitoba">Manitoba</SelectItem> <SelectItem value="brunswick">New Brunswick</SelectItem> <SelectItem value="ontario">Ontario</SelectItem> </SelectContent> </Select>
-          </div>
-
-
-
-          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
-
-            <Label
-              htmlFor="roleName"
-              className="lg:min-w-[160px]"
-            >
-              Zipcode <span className="text-[#EC221F]">*</span>
-            </Label>
-
-
-            <InputGroup merged>
-
-              {/* <InputGroupText>
-
-                <Icon icon="mdi:call" />
-
-              </InputGroupText> */}
-
-
-              <Input
-                type="text"
-                // placeholder="Enter Mobile Number"
-                id="roleName"
-                className="bg-[#F5F5F5]"
-
-              />
-
-            </InputGroup>
-
-          </div>
-
-
-
-
-
-
-
-
-
-
-
-          {/* ================================================= */}
-          {/* PERMISSION TITLE */}
-          {/* ================================================= */}
-
-
-
-
-          {/* ================================================= */}
-          {/* MODULE PERMISSIONS */}
-          {/* ================================================= */}
-
-
-
-
-          {/* ================================================= */}
-          {/* SUBMIT */}
-          {/* ================================================= */}
-
-
-
-
-        </div>
-        <div className="grid grid-cols-2 gap-[24px] border border-[#D9D9D9] border-[1px] rounded-[16px] p-[16px]">
-          <div className="col-span-2 flex flex-col gap-4 lg:flex-row justify-between lg:items-center">
-
-            <Label
-              className="lg:min-w-[160px] text-[20px] text-[#1b776f]"
-            >
-              Contact Details
-            </Label>
-
-
-          </div>
-          <AlertDialog>
-            <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
-
-              <Label
-                htmlFor="role"
-                className="lg:min-w-[160px]"
-              >
-                Select Primary Contact Person{" "}
-                <span className="text-[#EC221F]">*</span>
-              </Label>
-
-              <MultiSelect
-                options={roles}
-                value={selectedRoles}
-                onChange={setSelectedRoles}
-                placeholder="Select..."
-                showAddButton
-                addButton={
-                  <AlertDialogTrigger asChild>
-                    <button
-                      type="button"
-                      onClick={() => { }}
-                      className="flex h-[42px] w-full items-center justify-center rounded-[6px] border border-[#3B9B9B] bg-white px-[10px] text-[14px] font-medium text-[#2C8C8C] transition hover:bg-[#F4FAFA]"
-                    >
-                      Add New Contact Person
-                    </button>
-                  </AlertDialogTrigger>
-                }
-              />
-
-            </div>
-
-            {/* Alert Dialog */}
-            <AlertDialogContent >
-
-              <AlertDialogHeader>
-
-                <h3 className="text-[24px] font-medium text-[#1A766D] mb-[32px]">
-                  Add New Contact Person
-                </h3>
-
-                <div className="">
-
-                  {/* <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">
-                    Contact Information
-                  </h4> */}
-
-                  <div className="grid grid-cols-1 gap-[24px]">
-
-                    <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
-
-              <Label
-              htmlFor="roleName"
-              className="lg:min-w-[160px]"
-            >
-              Contact Name <span className="text-[#EC221F]">*</span>
-            </Label>
-
-
-            <InputGroup merged>
-
-              {/* <InputGroupText>
-
-                <Icon icon="mdi:call" />
-
-              </InputGroupText> */}
-
-
-              <Input
-                type="text"
-                placeholder="Enter Contact Name"
-                id="roleName"
-                className="bg-[#F5F5F5]"
-
-              />
-
-            </InputGroup>
-
-          </div>
-
-                   <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
-
-            <Label
-              htmlFor="roleName"
-              className="lg:min-w-[160px]"
-            >
-              Contact Email Address <span className="text-[#EC221F]">*</span>
-            </Label>
-
-
-            <InputGroup merged>
-
-              {/* <InputGroupText>
-
-                <Icon icon="mdi:call" />
-
-              </InputGroupText> */}
-
-
-              <Input
-                type="text"
-                placeholder="Enter Email Address"
-                id="roleName"
-                className="bg-[#F5F5F5]"
-
-              />
-
-            </InputGroup>
-
-          </div>
-                  <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
-
-            <Label
-              htmlFor="roleName"
-              className="lg:min-w-[160px]"
-            >
-              Contact Number <span className="text-[#EC221F]">*</span>
-            </Label>
-
-
-            <InputGroup merged>
-
-              {/* <InputGroupText>
-
-                <Icon icon="mdi:call" />
-
-              </InputGroupText> */}
-
-
-              <Input
-                type="text"
-                placeholder="Enter Contact Number"
-                id="roleName"
-                className="bg-[#F5F5F5]"
-
-              />
-
-            </InputGroup>
-
-          </div>
-
-                  </div>
-
-                </div>
-
-              </AlertDialogHeader>
-
-              <AlertDialogFooter>
-
-                <AlertDialogCancel className="bg-[#5A5A5A]">
-                  Cancel
-                </AlertDialogCancel>
-
-                <Button className="bg-[#1A766D] hover:bg-[#1b776f]/80">
-                  Add Contact Person
-                </Button>
-
-              </AlertDialogFooter>
-
-            </AlertDialogContent>
-          </AlertDialog>
-
-
-
-
-
-
-
-
-
-        </div>
+      
 
         <div className=" mt-[12px]  gap-4">
           <div className="block">
@@ -872,164 +539,10 @@ export default function Page() {
           <Button className="bg-[#5A5A5A]" type="submit">
             Discard
           </Button>
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <Button
-              >
-                Add Billing Account
-              </Button>
-            </AlertDialogTrigger>
-            <AlertDialogContent className="max-w-[800px] h-full overflow-x-auto">
-              <AlertDialogHeader>
-                <div className="">
-                 <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Confirm New User </h3>
-                <div className="border border-[#D9D9D9] rounded-[16px] p-[16px]">
-                  <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Billing Account</h4>
-                  <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Company name:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">BrightWave Solutions</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Billing name:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Luna Harper</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">GST Number:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">GSTIN 29ABCDE1234F2Z5</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">PAN Number:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">GSTIN 29ABCDE1234F2Z5</h3>
-                    </div>
-                   
-                  </div>
-
-                  {/* <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2> */}
-
-
-                </div>
-                <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
-                  <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Registered Address</h4>
-                  <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Address Line 1</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Building no1 Efafaf</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Address Line 2</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">TOwn asnadw</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">City</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Mumbai</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">State</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Maharashtra</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Country</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">India</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Zipcode</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">450852</h3>
-                    </div>
-                   
-                  </div>
-
-                  {/* <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2> */}
-
-
-                </div>
-                <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
-                  <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Billing Address</h4>
-                  <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Address Line 1</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Building no1 Efafaf</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Address Line 2</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">TOwn asnadw</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">City</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Mumbai</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">State</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Maharashtra</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Country</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">India</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Zipcode</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">450852</h3>
-                    </div>
-                   
-                  </div>
-
-                  {/* <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2> */}
-
-
-                </div>
-                <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
-                  <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Contact</h4>
-                  <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Contact Name:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">jhone doe</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Contact Email Address:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">abc@gmail.com</h3>
-                    </div>
-                    <div className="col-span-1">
-                      <h4 className="text-[16px] text-[#757575]">Contact Phone Number:</h4>
-                      <h3 className="text-[#1E1E1E] text-[20px]">Mumbai</h3>
-                    </div>
-                     <div className="col-span-1">
-                                <h4 className="text-[16px] text-[#757575]">Role</h4>
-                                <h3 className="text-[#1A766D] bg-[#E8FFFB] w-fit rounded-[100px] px-[16px] py-[8px] text-[16px]">Admin</h3>
-                              </div>  
-                   
-                  </div>
-
-                  {/* <h2 className="text-[20px] text-[#1A766D] font-[500] mt-[32px] mb-0">Permissions </h2> */}
-
-
-                </div>
-                <div className="border border-[#D9D9D9] rounded-[16px] p-[16px] mt-[16px]">
-                  <h4 className="text-[16px] text-[#1E1E1E] font-[500] mb-[24px]">Account Status</h4>
-                  <div className="grid grid-cols-2 gap-[24px]">
-                    <div className="col-span-1">
-                      <Switch size="lg" id="s2" />
-                    </div>
-                 
-                   
-                  </div>
-
-                
-
-
-                </div>
-             
-                </div>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel className="bg-[#5A5A5A]">
-                  Go back and Edit
-                </AlertDialogCancel>
-                <a href="/billing-account-managemen" className="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px] bg-[#1A766D]">
-                  Confirm and Add Account
-                </a>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
+          <Button  type="submit">
+            Save Changes
+          </Button>
+    
 
         </div>
 
