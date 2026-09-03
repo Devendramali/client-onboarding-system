@@ -43,12 +43,12 @@ const Sidebox = () => {
                 </Button> */}
 
              
-                <div className="text-4xl leading-[50px] 2xl:text-6xl 2xl:leading-[72px] font-semibold mt-2.5">
+                <div className="text-[64px] leading-[50px] l leading-[90%] font-[500] mt-2.5">
                   {/* <span </span> */}
                   <span className="text-[#fff]  ">All Clients, 
                     Managed in 
                     One Place.</span></div>
-                <div className="mt-8 text-[#fff]  text-[20px] font-medium">
+                <div className="mt-8 text-[#fff]  text-[20px] font-[500]">
                  Stay organized, save time, and keep every client moving forward.
                 </div>
               </div>
