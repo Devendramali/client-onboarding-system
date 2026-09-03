@@ -83,18 +83,9 @@ const FooterContent = () => {
   return (
     <div className="block md:flex md:justify-between text-muted-foreground">
       <p className="sm:mb-0 text-xs md:text-sm">
-        COPYRIGHT © {new Date().getFullYear()} DashTail All rights Reserved
+        Copyright © {new Date().getFullYear()} Client Onboarding System. All Rights Reserved. Powered By : <a href="https://www.digihost.in/" target="_blank">DIIGIIHOST</a>
       </p>
-      <p className="mb-0 text-xs md:text-sm">
-        Hand-crafted & Made by{" "}
-        <a
-          className="text-primary"
-          target="__blank"
-          href="https://codeshaper.net"
-        >
-          Codeshaper
-        </a>
-      </p>
+      
     </div>
   );
 };
