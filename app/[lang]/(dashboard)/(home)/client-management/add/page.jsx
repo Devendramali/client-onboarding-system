@@ -103,12 +103,12 @@ export default function Page() {
 
     <Card breadcrumbdata={[
       { title: "Dashboard", link: "/" },
-      { title: "Billing Account Management", link: "/billing-account-management" },
-      { title: "Add billing account", link: "/billing-account-management/add" },
-    ]}>
+      { title: "Client Management", link: "/client-management" },
+      { title: "Add Client", link: "" },
+    ]}> 
       <div className="flex flex-wrap items-center gap-4 mb-5">
         <div className="flex-1">
-          <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Add new billing account</h3>
+          <h3 className="text-[32px] text-[#1b776f] font-medium  mb-2">Add new client</h3>
         </div>
       </div>
 
@@ -120,7 +120,7 @@ export default function Page() {
             <Label
               className="lg:min-w-[160px] text-[20px] text-[#1b776f]"
             >
-              Company Information
+             Basic Information
             </Label>
 
           </div>
@@ -136,7 +136,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-              Company Name <span className="text-[#EC221F]">*</span>
+              Full Name <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -151,7 +151,7 @@ export default function Page() {
 
               <Input
                 type="text"
-                // placeholder="Enter Full Name"
+                placeholder="Enter Full Name"
                 id="roleName"
                 className="bg-[#F5F5F5]"
 
@@ -172,7 +172,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-              Billing Name <span className="text-[#EC221F]">*</span>
+             Email Address <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -187,7 +187,7 @@ export default function Page() {
 
               <Input
                 type="text"
-                // placeholder="Enter Email Address"
+                placeholder="Enter Email Address"
                 id="roleName"
                 className="bg-[#F5F5F5]"
 
@@ -205,7 +205,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-              GST Number
+             Phone Number <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -220,7 +220,7 @@ export default function Page() {
 
               <Input
                 type="text"
-                // placeholder="Enter Mobile Number"
+                placeholder="Enter Mobile Number"
                 id="roleName"
                 className="bg-[#F5F5F5]"
 
@@ -235,7 +235,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-              PAN Number
+              Designation <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -250,7 +250,7 @@ export default function Page() {
 
               <Input
                 type="text"
-                // placeholder="Enter Mobile Number"
+                placeholder="Enter Designation"
                 id="roleName"
                 className="bg-[#F5F5F5]"
 
@@ -260,7 +260,7 @@ export default function Page() {
 
           </div>
 
-          {/* <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
+          <div className="col-span-1 flex flex-col gap-2 lg:flex-col lg:items-left">
             <Label
               htmlFor="role"
               className="lg:min-w-[160px]"
@@ -274,7 +274,7 @@ export default function Page() {
               onChange={setSelectedRoles}
               // placeholder="Select..."
             />
-          </div> */}
+          </div>
 
 
 

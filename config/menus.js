@@ -1005,6 +1005,11 @@ export const menusConfig = {
             icon: Graph,
           },
           {
+            title: "Client Management",
+            href: "/client-management",
+            icon: Graph,
+          },
+          {
             title: "Module Management",
             href: "/module-management",
             icon: Cart,

@@ -37,17 +37,17 @@ const Userlist = () => {
     <div className=" space-y-6">
       <Card breadcrumbdata={[
         { title: "Dashboard", link: "/" },
-        { title: "Billing Account Management", link: "/billing-account-management" },
+        { title: "Client Management", link: "/client-management" },
         // { title: "Add Role", link: "/role-management/add" },
       ]}>
         <div className="flex flex-wrap items-center gap-4 mb-5">
           <div className="flex-1">
-            <h3 className="text-xl font-medium text-[#1b776f] mb-2">Billing Account Management</h3>
+            <h3 className="text-xl font-medium text-[#1b776f] mb-2">Client Management</h3>
           </div>
           <div className="flex-none">
-            <a href="/billing-account-management/add" class="inline-flex items-center justify-center rounded-md text-[16px] font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" ><svg className="me-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <a href="/client-management/add" class="inline-flex items-center justify-center rounded-md text-[16px] font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" ><svg className="me-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M5 12H19M12 5V19" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>Add New Billing Account</a>
+            </svg>Add New Client</a>
           </div>
         </div>
 
@@ -105,7 +105,7 @@ const Userlist = () => {
 
                 <TableCell >
                   <div className="flex gap-3">
-                  <a href="/billing-account-management/update" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer hover:text-primary-foreground hover:border-primary hover:bg-[#1b776f] h-7 w-7 bg-[#fff] border border-[#1A766D] text-[#1A766D]">
+                  <a href="/client-management/update" class="inline-flex items-center justify-center rounded-md text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer hover:text-primary-foreground hover:border-primary hover:bg-[#1b776f] h-7 w-7 bg-[#fff] border border-[#1A766D] text-[#1A766D]">
                     <Icon icon="heroicons:pencil" className="h-4 w-4 " />
                   </a>
 
