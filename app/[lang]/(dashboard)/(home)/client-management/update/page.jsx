@@ -290,9 +290,9 @@ export default function Page() {
             </Label>
 
             <MultiSelect
-              options={roles}
-              value={selectedRoles}
-              onChange={setSelectedRoles}
+              options={roles1 }
+              value={selectedRoles1}
+              onChange={setSelectedRoles1}
               // placeholder="Select..."
             />
           </div>
@@ -305,9 +305,9 @@ export default function Page() {
             </Label>
 
             <CustomSelect
-              options={roles1}
-              value={selectedRoles1}
-              onChange={setSelectedRoles1}
+              options={roles}
+              value={selectedRoles}
+              onChange={setSelectedRoles}
               // placeholder="Select..."
             />
           </div>

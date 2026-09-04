@@ -1009,6 +1009,11 @@ export const menusConfig = {
             href: "/client-management",
             icon: Graph,
           },
+             {
+            title: "Project Management",
+            href: "/project-management",
+            icon: Graph,
+          },
           // {
           //   title: "Module Management",
           //   href: "/module-management",
