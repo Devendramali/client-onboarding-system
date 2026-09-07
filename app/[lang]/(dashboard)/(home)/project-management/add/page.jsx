@@ -981,7 +981,7 @@ export default function Page() {
             <AlertDialogContent className="max-w-[800px] max-h-[90vh] overflow-y-auto">
               <AlertDialogHeader>
                 <div className="">
-                 <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Confirm Project</h3>
+                 <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Confirm New Project</h3>
                 <div className="border border-[#D9D9D9] rounded-[16px] p-[16px]">
                   <h4 className="text-[20px] text-[#1A766D] font-[500] mb-[24px]">Project Information</h4>
                   <div className="grid grid-cols-2 gap-[24px]">
