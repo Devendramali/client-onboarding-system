@@ -220,7 +220,7 @@ export default function Page() {
               htmlFor="roleName"
               className="lg:min-w-[160px]"
             >
-              Project Information <span className="text-[#EC221F]">*</span>
+              Project Name <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -736,7 +736,7 @@ export default function Page() {
             <Label
               className="lg:min-w-[160px] text-[20px] text-[#1b776f]"
             >
-             Project Scope
+             Project Timeline
             </Label>
 
           </div>
@@ -746,7 +746,7 @@ export default function Page() {
               htmlFor="role"
               className="lg:min-w-[160px]"
             >
-              Project Timeline <span className="text-[#EC221F]">*</span>
+              Start Date <span className="text-[#EC221F]">*</span>
             </Label>
 
 
@@ -770,7 +770,7 @@ export default function Page() {
                                    {field.value ? (
                                      format(field.value, "PPP")
                                    ) : (
-                                     <span>Pick a date</span>
+                                     <span>Select</span>
                                    )}
                                    <CalendarIcon className="ltr:ml-auto rtl:mr-auto h-4 w-4 opacity-50" />
                                  </Button>
@@ -824,7 +824,7 @@ export default function Page() {
                                    {field.value ? (
                                      format(field.value, "PPP")
                                    ) : (
-                                     <span>Pick a date</span>
+                                     <span>Select</span>
                                    )}
                                    <CalendarIcon className="ltr:ml-auto rtl:mr-auto h-4 w-4 opacity-50" />
                                  </Button>
