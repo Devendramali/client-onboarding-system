@@ -47,7 +47,7 @@ const Userlist = () => {
           <div className="flex-none">
             <a href="/project-management/add" class="inline-flex items-center justify-center rounded-md text-[16px] font-semibold ring-offset-background transition-colors focus-visible:outline-hidden focus-visible:ring-0 disabled:opacity-50 whitespace-nowrap disabled:pointer-events-none cursor-pointer bg-[#1b776f] text-primary-foreground hover:bg-[#1b776f]/80 h-10 px-4 py-[10px]" ><svg className="me-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M5 12H19M12 5V19" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>Add Project</a>
+            </svg>Add New Project</a>
           </div>
         </div>
 
@@ -210,7 +210,7 @@ const Userlist = () => {
                           <div className="">
                                            <div className="flex justify-between nx-items-center">
                                          
-                                                                   <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]">Confirm New Project</h3>
+                                                                   <h3 className="text-[24px] font-medium text-[#1b776f]  mb-[32px]"> Project</h3>
                                                                    <AlertDialogCancel className="bg-transparent hover:bg-transparent">
                                                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                                                        <path d="M18 6L6 18M6 6L18 18" stroke="#383838" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -239,7 +239,7 @@ const Userlist = () => {
                                                          </div>
                                               </div>
                                               <div className="lg:col-span-1 col-span-2">
-                                                <h4 className="text-[16px] text-[#757575]">Project Type</h4>
+                                                <h4 className="text-[16px] text-[#757575]">Project Description</h4>
                                                 <h3 className="text-[#1E1E1E] text-[20px]">Build a landing page for a bookstore</h3>
                                               </div>
                                              
