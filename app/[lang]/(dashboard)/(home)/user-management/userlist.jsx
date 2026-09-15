@@ -173,9 +173,30 @@ const Userlist = () => {
                       </AlertDialogHeader>
                        <AlertDialogFooter>
                                           
-                                            <AlertDialogAction className="bg-[#1A766D]">
-                                              Resend Login Credentials
-                                            </AlertDialogAction>
+                                               <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                      <Button
+                        className="bg-[#1A766D] hover:bg-[#1A766D]"
+                      // color="secondary"
+                      >
+                        Resend Login Credentials
+                      </Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent className="max-w-[400px]">
+                      <AlertDialogHeader>
+                        <h2 className="text-[24px] text-[#1A766D] text-center">Resend Login Credentials</h2>
+                        <p className="text-center">Are you sure you want to resend the login credentials to tis user</p>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter className="items-center !justify-center">
+                        <AlertDialogCancel className="bg-[#5A5A5A] hover:bg-[#1A766D]">
+                         Cancel
+                        </AlertDialogCancel>
+                        <AlertDialogAction className="bg-[#1A766D] hover:bg-destructive/80">
+                        Resend
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog >
                                             <AlertDialogAction className="bg-[#1A766D]">
                                               Reset Password
                                             </AlertDialogAction>

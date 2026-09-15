@@ -28,6 +28,7 @@ import {
 import { Icon } from "@iconify/react";
 import Card from "@/components/ui/card-snippet";
 import MultiSelect from "@/components/ui/MultiSelect";
+import CustomSelect from "@/components/ui/CustomSelect";
 import { Switch } from "@/components/ui/switch";
 
 // =====================================================
@@ -693,7 +694,7 @@ export default function Page() {
                 <span className="text-[#EC221F]">*</span>
               </Label>
 
-              <MultiSelect
+              <CustomSelect
                 options={roles}
                 value={selectedRoles}
                 onChange={setSelectedRoles}
